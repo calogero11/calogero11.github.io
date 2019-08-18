@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!------------------------------------------------- Start Navigation ------------------------------------------------->
+<!---------------------------------------------------- Navigation ----------------------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Calogero Prestifilippo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,9 +31,9 @@ layout: default
         </ul>
     </div>
 </nav>
-<!-------------------------------------------------- End Navigation -------------------------------------------------->
+<!-------------------------------------------------- End Navigation --------------------------------------------------->
 
-<!------------------------------------------------ Start Home Section ------------------------------------------------>
+<!--------------------------------------------------- Home Section ---------------------------------------------------->
 <div id="index" class="row align-items-center fullscreen bg-fixed bg-cover" style="background-image: url(assets/images/index-background-dark.png);">
     <div id="indexText" class="col text-center text-white">
         <h1 class="font-UnifrakturMaguntia">
@@ -44,11 +44,48 @@ layout: default
         </h3>
     </div>
 </div>
-<!------------------------------------------------- End Home Section ------------------------------------------------->
+<!------------------------------------------------- End Home Section -------------------------------------------------->
 
-<!------------------------------------------------ Start Intro Section ------------------------------------------------>
+<!--------------------------------------------------- Intro Section --------------------------------------------------->
 <div id="intro" class="row align-items-center fullscreen fullscreen-lg" style="background-color: #000000; color: white;">
-    <div class="col-12">
+    <div class="col-12 col-lg-6">
+        <div class="row d-block">
+            <div id="exitConsoleMessageDiv" class="col-7 rm-my-lg mx-auto d-none">
+                <h1 class="float-left" id="exitConsoleMessage"></h1>
+                <h1>
+                    |
+                </h1>
+                <button id="consoleRenew" onclick="consoleRenew()" class="float-bottom btn">Yes</button>
+            </div>
+            <div id="console" class="col-7 rounded mx-auto rm-my-lg" style="background-color: #cdcdcd; height: 12.4em;">
+                <button onclick="exitConsole()" class="bg-danger console__btn mt-2 mb-3"></button>
+                <button class="bg-warning console__btn mt-2 mb-3"></button>
+                <button class="bg-success console__btn mt-2 mb-3"></button>
+                <p class="text-center text-secondary mr-5 mb-3">
+                    Integrated Development Environment
+                </p>
+                <div class="row">
+                    <div class="col-12 rounded-bottom" style="background-color: #323639; height: 9.9em;">
+                        <div class="float-left mr-2 text-light border-right border-secondary" style="font-size: 12px;">
+                            <p class="mb-1 pr-3 mt-1">01</p>
+                            <p class="mb-1">02</p>
+                            <p class="mb-1">03</p>
+                            <p class="mb-1">04</p>
+                            <p class="mb-1">05</p>
+                            <p class="mb-1">06</p>
+                            <p class="mb-1">07</p>
+                        </div>
+
+                        <p class="float-left mb-0" style="color: white" id="app"></p>
+                        <span class="mb-0" style=" color: white;">
+                            |
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
         <div id="introPara" class="col-10 my-lg rm-mb-lg mx-auto text-center text-lg-left">
             <h1>
                 HOW IT ALL STARTED...
@@ -84,3 +121,57 @@ layout: default
     </div>
 </div>
 <!------------------------------------------------- End Intro Section ------------------------------------------------->
+
+<!------------------------------------------------------ Script ------------------------------------------------------->
+<script>
+
+    // <!-------------------------------------------- TypeWriter Function --------------------------------------------->
+
+    var i = 0;
+    var txt = 'Hello World';
+    var speed = 300;
+    var elementTarget = document.getElementById("index");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+            typeWriter();
+        }
+    });
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("app").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    // <!------------------------------------------ End TypeWriter Function ------------------------------------------->
+
+    // <!--------------------------------------------- Exit IDE Function ---------------------------------------------->
+
+    function exitConsole() {
+        document.getElementById('console').style.display = 'none';
+        $('#exitConsoleMessageDiv').removeClass('d-none');
+        exitTypeWriter()
+    }
+
+    var x = 0;
+    var speed1 = 100;
+    var exitMessage = 'Did you exit Console by accident?';
+
+    function exitTypeWriter() {
+        if (x < exitMessage.length) {
+            document.getElementById("exitConsoleMessage").innerHTML += exitMessage.charAt(x);
+            x++;
+            setTimeout(exitTypeWriter, speed1);
+        }
+    }
+
+    function consoleRenew() {
+        $('#exitConsoleMessageDiv').addClass('d-none');
+        document.getElementById('console').style.display = '';
+    }
+    // <!------------------------------------------- End Exit IDE Function -------------------------------------------->
+
+</script>
+<!---------------------------------------------------- End Script ----------------------------------------------------->
