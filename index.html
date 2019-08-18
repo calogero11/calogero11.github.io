@@ -17,6 +17,11 @@ layout: default
             <li class="nav-item">
                 <a class="nav-link" href="#intro">Intro</a>
             </li>
+            <li class="nav-item">
+                <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
+                <button class="btn btn-warning" id="dark" onclick="changeColor('black', 'white', 'dark', 'light', 'white');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
+                <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeColor('white', 'black', 'light', 'dark', 'secondary');"><i class="far fa-lightbulb fa-1x"></i></button>
+            </li>
         </ul>
     </div>
 </nav>
@@ -161,6 +166,25 @@ layout: default
         document.getElementById('console').style.display = '';
     }
     // <!------------------------------------------- End Exit IDE Function -------------------------------------------->
+
+    // <!---------------------------------------------- Theme Function ------------------------------------------------>
+    function changeColor(backgroundColour, textColour, onButton, offButton, buttonColour) {
+        var intro = document.getElementById('intro');
+        var lightSwitch = document.getElementById("audio");
+        intro.style.background = backgroundColour;
+        intro.style.color = textColour;
+        document.getElementById('collapseParagraph2').style.background = backgroundColour;
+        document.getElementById('collapseParagraph2').style.color = textColour;
+        $('#collapseParagraph2Button').removeClass('btn-white').addClass('btn-' + buttonColour);
+        document.getElementById(onButton).style.display = 'none';
+        document.getElementById(offButton).style.display = 'inline';
+        document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + onButton + ".png')";
+        document.getElementById('navbar-image').src = "assets/images/Logo-" +onButton + ".png";
+        $('#navbar').removeClass('navbar-' + offButton).addClass('navbar-' + onButton).removeClass('bg-' + offButton).addClass('bg-' + onButton);
+        $('#indexText').removeClass('text-' + backgroundColour).addClass('text-' + textColour);
+        lightSwitch.play();
+    }
+    // <!-------------------------------------------- End Theme Function ---------------------------------------------->
 
 </script>
 <!---------------------------------------------------- End Script ----------------------------------------------------->
