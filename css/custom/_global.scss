@@ -30,6 +30,20 @@
   margin-bottom:85px;
 }
 
+.console__btn {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 1.428571429;
+  border-radius: 7.5px;
+  float: left;
+}
+
+.rm-my-lg {
+  margin-bottom: 85px;
+  margin-top: 85px;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 
@@ -54,6 +68,11 @@
 
   .rm-mb-lg {
     margin-bottom:0;
+  }
+
+  .rm-my-lg {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
 }
