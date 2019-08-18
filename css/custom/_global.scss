@@ -17,6 +17,19 @@
   font-family: 'UnifrakturMaguntia', cursive; font-size: 7vw;
 }
 
+.my-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.fullscreen-lg {
+  height: auto;
+}
+
+.rm-mb-lg {
+  margin-bottom:85px;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 
@@ -29,6 +42,19 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+
+  .my-lg {
+    margin-top: 85px;
+    margin-bottom: 85px;
+  }
+
+  .fullscreen-lg {
+    height: 100vh;
+  }
+
+  .rm-mb-lg {
+    margin-bottom:0;
+  }
 
 }
 
