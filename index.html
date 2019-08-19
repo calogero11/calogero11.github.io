@@ -18,6 +18,9 @@ layout: default
                 <a class="nav-link" href="#intro">Intro</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#laravel">Laravel</a>
+            </li>
+            <li class="nav-item">
                 <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
                 <button class="btn btn-warning" id="dark" onclick="changeColor('black', 'white', 'dark', 'light', 'white');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
                 <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeColor('white', 'black', 'light', 'dark', 'secondary');"><i class="far fa-lightbulb fa-1x"></i></button>
@@ -28,7 +31,7 @@ layout: default
 <!-------------------------------------------------- End Navigation --------------------------------------------------->
 
 <!--------------------------------------------------- Home Section ---------------------------------------------------->
-<div id="index" class="row align-items-center fullscreen bg-fixed bg-cover" style="background-image: url(assets/images/index-background-dark.png);">
+<div id="index" class="row align-items-center fullscreen bg-fixed" style="background-image: url(assets/images/index-background-dark.png);">
     <div id="indexText" class="col text-center text-white">
         <h1 class="font-UnifrakturMaguntia">
             Calogero Prestifilippo
@@ -41,7 +44,7 @@ layout: default
 <!------------------------------------------------- End Home Section -------------------------------------------------->
 
 <!--------------------------------------------------- Intro Section --------------------------------------------------->
-<div id="intro" class="row align-items-center fullscreen fullscreen-lg" style="background-color: #000000; color: white;">
+<div id="intro" class="row align-items-center fullscreen-lg" style="background-color: #000000; color: white;">
     <div class="col-12 col-lg-6">
         <div class="row d-block">
             <div id="exitConsoleMessageDiv" class="col-7 rm-my-lg mx-auto d-none">
@@ -56,7 +59,7 @@ layout: default
                 <button class="bg-warning console__btn mt-2 mb-3"></button>
                 <button class="bg-success console__btn mt-2 mb-3"></button>
                 <p class="text-center text-secondary mr-5 mb-3">
-                    Integrated Development Environment
+                    IDE
                 </p>
                 <div class="row">
                     <div class="col-12 rounded-bottom" style="background-color: #323639; height: 9.9em;">
@@ -116,6 +119,33 @@ layout: default
 </div>
 <!------------------------------------------------- End Intro Section ------------------------------------------------->
 
+<!-------------------------------------------------- Laravel Section -------------------------------------------------->
+<div id="laravel" class="fullscreen row" style="background-color: #000000;">
+        <div id="laravelTitle" class="col-4 col-md-3 fullscreen" style="color: black; background-color: white; font-size: 8vh;">
+        <div class="pt-6 font-Kanit">
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">E</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">V</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">R</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
+            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
+        </div>
+    </div>
+    <div id="laravelPara" class="col-6 col-md-5 row align-items-center mx-auto" style="color: white;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque
+            purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor rhoncus dolor purus
+            non enim. Non odio euismod lacinia at quis risus sed vulputate odio. Diam maecenas ultricies mi eget.
+            Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nunc scelerisque viverra mauris in
+            aliquam sem fringilla ut morbi. Urna et pharetra pharetra massa massa ultricies mi quis hendrerit. Et tortor
+            consequat id porta nibh venenatis cras.
+        </p>
+
+    </div>
+</div>
+<!------------------------------------------------ End Laravel Section ------------------------------------------------>
+
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
 
@@ -171,6 +201,10 @@ layout: default
     function changeColor(backgroundColour, textColour, onButton, offButton, buttonColour) {
         var intro = document.getElementById('intro');
         var lightSwitch = document.getElementById("audio");
+        document.getElementById('laravel').style.background = backgroundColour;
+        document.getElementById('laravelTitle').style.background = textColour;
+        document.getElementById('laravelTitle').style.color = backgroundColour;
+        document.getElementById('laravelPara').style.color = textColour;
         intro.style.background = backgroundColour;
         intro.style.color = textColour;
         document.getElementById('collapseParagraph2').style.background = backgroundColour;
