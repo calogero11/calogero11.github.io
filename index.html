@@ -21,6 +21,9 @@ layout: default
                 <a class="nav-link" href="#laravel">Laravel</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
                 <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
                 <button class="btn btn-warning" id="dark" onclick="changeColor('black', 'white', 'dark', 'light', 'white');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
                 <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeColor('white', 'black', 'light', 'dark', 'secondary');"><i class="far fa-lightbulb fa-1x"></i></button>
@@ -138,13 +141,35 @@ layout: default
             purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor rhoncus dolor purus
             non enim. Non odio euismod lacinia at quis risus sed vulputate odio. Diam maecenas ultricies mi eget.
             Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nunc scelerisque viverra mauris in
-            aliquam sem fringilla ut morbi. Urna et pharetra pharetra massa massa ultricies mi quis hendrerit. Et tortor
-            consequat id porta nibh venenatis cras.
+            aliquam sem fringilla ut morbi.
         </p>
 
     </div>
 </div>
 <!------------------------------------------------ End Laravel Section ------------------------------------------------>
+
+<!-------------------------------------------------- Projects Section ------------------------------------------------->
+<div id="projects" class="fullscreen" style="background-color: black; color: white">
+    <div class="row align-items-center" style="height:80vh;" >
+        <h1 class="col-12 text-center pt-6">Projects</h1>
+        <div class="col-12 col-sm-6 col-lg-4 py-3">
+            <div id="project1" class="col-10 mx-auto p-2" style=" height:20vh; background-color: white;">
+                <!--<div class="bg-cover col-12 " style="height:18vh; background-image: url('...');">--><!--</div>-->
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 py-3">
+            <div id="project2" class="col-10 mx-auto p-2" style=" height:20vh; background-color: white;">
+                <!--<div class="bg-cover col-12 " style="height:18vh; background-image: url('...');">--><!--</div>-->
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 py-3 col-lg-4 mx-sm-auto mx-lg-0">
+            <div id="project3" class="col-10 mx-auto p-2" style=" height:20vh; background-color: white;">
+                <!--<div class="bg-cover col-12 " style="height:18vh; background-image: url('...');">--><!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------ End Projects Section ----------------------------------------------->
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
@@ -201,6 +226,11 @@ layout: default
     function changeColor(backgroundColour, textColour, onButton, offButton, buttonColour) {
         var intro = document.getElementById('intro');
         var lightSwitch = document.getElementById("audio");
+        document.getElementById('projects').style.background = backgroundColour;
+        document.getElementById('projects').style.color = textColour;
+        document.getElementById('project1').style.background = textColour;
+        document.getElementById('project2').style.background = textColour;
+        document.getElementById('project3').style.background = textColour;
         document.getElementById('laravel').style.background = backgroundColour;
         document.getElementById('laravelTitle').style.background = textColour;
         document.getElementById('laravelTitle').style.color = backgroundColour;
