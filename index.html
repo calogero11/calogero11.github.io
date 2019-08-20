@@ -4,7 +4,7 @@ layout: default
 
 <!---------------------------------------------------- Navigation ----------------------------------------------------->
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"><img id="navbar-image" src="assets/images/Logo-dark.png"></a>
+    <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,8 +28,8 @@ layout: default
             </li>
             <li class="nav-item">
                 <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
-                <button class="btn btn-warning" id="dark" onclick="changeColor('black', 'white', 'dark', 'light', 'white');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
-                <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeColor('white', 'black', 'light', 'dark', 'info');"><i class="far fa-lightbulb fa-1x"></i></button>
+                <button class="btn btn-warning" id="dark" onclick="changeTheme('info', 'white', 'dark', 'light');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
+                <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeTheme('white', 'info', 'light', 'dark');"><i class="far fa-lightbulb fa-1x"></i></button>
             </li>
         </ul>
     </div>
@@ -37,8 +37,8 @@ layout: default
 <!-------------------------------------------------- End Navigation --------------------------------------------------->
 
 <!--------------------------------------------------- Home Section ---------------------------------------------------->
-<div id="index" class="row align-items-center fullscreen bg-fixed" style="background-image: url(assets/images/index-background-dark.png);">
-    <div id="indexText" class="col text-center text-white">
+<div id="index" class="row align-items-center fullscreen bg-fixed text-white" style="background-image: url(assets/images/index-background-dark.png);">
+    <div id="indexText" class="col text-center">
         <h1 class="font-UnifrakturMaguntia">
             Calogero Prestifilippo
         </h1>
@@ -50,7 +50,7 @@ layout: default
 <!------------------------------------------------- End Home Section -------------------------------------------------->
 
 <!--------------------------------------------------- Intro Section --------------------------------------------------->
-<div id="intro" class="row align-items-center fullscreen-lg" style="background-color: #000000; color: white;">
+<div id="intro" class="row align-items-center fullscreen-lg text-white bg-info">
     <div class="col-12 col-lg-6">
         <div class="row d-block">
             <div id="exitConsoleMessageDiv" class="col-7 rm-my-lg mx-auto d-none">
@@ -126,8 +126,8 @@ layout: default
 <!------------------------------------------------- End Intro Section ------------------------------------------------->
 
 <!-------------------------------------------------- Laravel Section -------------------------------------------------->
-<div id="laravel" class="fullscreen row" style="background-color: #000000;">
-        <div id="laravelTitle" class="col-4 col-md-3 fullscreen" style="color: black; background-color: white; font-size: 8vh;">
+<div id="laravel" class="fullscreen row text-white bg-info">
+        <div id="laravelTitle" class="col-4 col-md-3 fullscreen text-info bg-white" style="font-size: 8vh;">
         <div class="pt-6 font-Kanit">
             <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
             <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">E</p>
@@ -152,7 +152,7 @@ layout: default
 <!------------------------------------------------ End Laravel Section ------------------------------------------------>
 
 <!-------------------------------------------------- Projects Section ------------------------------------------------->
-<div id="projects" class="fullscreen" style="background-color: black; color: white">
+<div id="projects" class="fullscreen text-white bg-info"">
     <div class="row align-items-center" style="height:80vh;" >
         <h1 class="col-12 text-center pt-6">Projects</h1>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
@@ -187,7 +187,7 @@ layout: default
 <!------------------------------------------------ End Projects Section ----------------------------------------------->
 
 <!-------------------------------------------------- Languages Section ------------------------------------------------->
-<div id="languages" style="background-color: black; color: white;">
+<div id="languages" class="text-white bg-info">
     <h2 class="text-center pt-6 pb-3">Languages, Framworks & Technologies</h2>
     <div class="col-11 mx-auto pb-6">
         <div class="row">
@@ -306,31 +306,49 @@ layout: default
     // <!------------------------------------------- End Exit IDE Function -------------------------------------------->
 
     // <!---------------------------------------------- Theme Function ------------------------------------------------>
-    function changeColor(backgroundColour, textColour, onButton, offButton, buttonColour) {
-        var intro = document.getElementById('intro');
-        var lightSwitch = document.getElementById("audio");
-        document.getElementById('projects').style.background = backgroundColour;
-        document.getElementById('projects').style.color = textColour;
-        document.getElementById('project1').style.background = textColour;
-        document.getElementById('project2').style.background = textColour;
-        document.getElementById('project3').style.background = textColour;
-        document.getElementById('laravel').style.background = backgroundColour;
-        document.getElementById('laravelTitle').style.background = textColour;
-        document.getElementById('laravelTitle').style.color = backgroundColour;
-        document.getElementById('laravelPara').style.color = textColour;
-        intro.style.background = backgroundColour;
-        intro.style.color = textColour;
-        document.getElementById('collapseParagraph2').style.background = backgroundColour;
-        document.getElementById('collapseParagraph2').style.color = textColour;
-        $('#collapseParagraph2Button').removeClass('btn-white').addClass('btn-' + buttonColour);
-        document.getElementById(onButton).style.display = 'none';
-        document.getElementById(offButton).style.display = 'inline';
-        document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + onButton + ".png')";
-        document.getElementById('navbar-image').src = "assets/images/Logo-" +onButton + ".png";
-        $('#navbar').removeClass('navbar-' + offButton).addClass('navbar-' + onButton).removeClass('bg-' + offButton).addClass('bg-' + onButton);
-        $('#indexText').removeClass('text-' + backgroundColour).addClass('text-' + textColour);
-        lightSwitch.play();
+    function changeTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
+        document.getElementById("audio").play();
+        document.getElementById(mainTheme).style.display = 'none';
+        document.getElementById(secondaryTheme).style.display = 'inline';
+        changePagesTheme(mainColour, secondaryColour, mainTheme);
+        changeCardsTheme(mainColour, secondaryColour);
+        changeNavbarTheme(mainTheme, secondaryTheme);
     }
+
+    function changeNavbarTheme(mainTheme, secondaryTheme) {
+        $('#navbar').removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme).removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme);
+        document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
+    }
+
+    function changePagesTheme(mainColour, secondaryColour, mainTheme) {
+        var pages = [
+            $('#intro'),
+            $('#laravel'),
+            $('#projects'),
+            $('#languages')
+        ];
+
+        pages.forEach(function(page) {
+         page.removeClass('bg-' + secondaryColour).addClass('bg-'+ mainColour).removeClass('text-' + mainColour).addClass('text-'+ secondaryColour);
+        });
+
+        $('#index').removeClass('text-' + mainColour).addClass('text-' + secondaryColour);
+        document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + mainTheme + ".png')";
+    }
+
+    function changeCardsTheme(mainColour, secondaryColour) {
+        var cards = [
+            $('#laravelTitle'),
+            $('#project1'),
+            $('#project2'),
+            $('#project3')
+        ];
+
+        cards.forEach(function(card) {
+            card.removeClass('bg-' + mainColour).addClass('bg-'+ secondaryColour).removeClass('text-' + secondaryColour).addClass('text-'+ mainColour);
+        });
+    }
+
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
 
 </script>
