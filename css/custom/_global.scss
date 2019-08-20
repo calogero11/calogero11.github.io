@@ -88,14 +88,23 @@
   margin-top: 85px;
 }
 
+.languages-square {
+  height: 30.5555555555555555555555555555555555555555555vw;
+
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-
+  .languages-square {
+    height: calc(275vw/12);
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
+  .languages-square {
+    height: calc(275vw/18);
+  }
 }
 
 // Large devices (desktops, 992px and up)
