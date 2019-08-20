@@ -4,6 +4,7 @@ email:
 author:
 description:
 url:
+baseurl: /project
 
 # Build settings
 permalink: :title/
