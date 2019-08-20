@@ -12,19 +12,19 @@ layout: default
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#index">Home</a>
+                <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#intro">Intro</a>
+                <a class="nav-link" href="#intro" onclick="smoothScroll()">Intro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#laravel">Laravel</a>
+                <a class="nav-link" href="#laravel" onclick="smoothScroll()">Laravel</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#projects" onclick="smoothScroll()">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#languages">Languages</a>
+                <a class="nav-link" href="#languages" onclick="smoothScroll()">Languages</a>
             </li>
             <li class="nav-item">
                 <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
@@ -227,10 +227,23 @@ layout: default
         </div>
     </div>
 </div>
-<!------------------------------------------------ End Languages Section ----------------------------------------------->
+<!------------------------------------------------ End Languages Section ---------------------------------------------->
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+
+    // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
+
+    function smoothScroll() {
+        event.preventDefault();
+        const target = event.currentTarget.getAttribute('href');
+        window.scrollTo({
+            top: document.querySelector(target).offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
+    // <!----------------------------------------- End Smooth Scroll Function ----------------------------------------->
 
     // <!-------------------------------------------- TypeWriter Function --------------------------------------------->
 
@@ -240,7 +253,7 @@ layout: default
     var elementTarget = document.getElementById("index");
 
     window.addEventListener("scroll", function() {
-        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
+        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight - 1)) {
             typeWriter();
         }
     });
