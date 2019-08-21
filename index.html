@@ -60,7 +60,7 @@ layout: default
                 </h1>
                 <button id="consoleRenew" onclick="consoleRenew()" class="float-bottom btn">Yes</button>
             </div>
-            <div id="console" class="col-7 rounded mx-auto rm-my-lg" style="background-color: #cdcdcd; height: 12.4em;">
+            <div id="console" data-aos="fade-right" data-aos-duration="1500" class="col-7 rounded mx-auto rm-my-lg" style="background-color: #cdcdcd; height: 12.4em;">
                 <button onclick="exitConsole()" class="bg-danger console__btn mt-2 mb-3"></button>
                 <button class="bg-warning console__btn mt-2 mb-3"></button>
                 <button class="bg-success console__btn mt-2 mb-3"></button>
@@ -89,7 +89,7 @@ layout: default
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <div id="introPara" class="col-10 my-lg rm-mb-lg mx-auto text-center text-lg-left">
+        <div id="introPara" class="col-10 my-lg rm-mb-lg mx-auto text-center text-lg-left" data-aos="fade-left" data-aos-duration="1500">
             <h1>
                 HOW IT ALL STARTED...
             </h1>
@@ -129,16 +129,30 @@ layout: default
 <div id="laravel" class="fullscreen row text-white bg-info">
         <div id="laravelTitle" class="col-4 col-md-3 fullscreen text-info bg-white" style="font-size: 8vh;">
         <div class="pt-6 font-Kanit">
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">E</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">V</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">R</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
-            <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">E</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">V</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">R</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
+            </div>
+            <div data-aos="fade-right">
+                <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
+            </div>
         </div>
     </div>
-    <div id="laravelPara" class="col-6 col-md-5 row align-items-center mx-auto" style="color: white;">
+    <div id="laravelPara" class="col-6 col-md-5 row align-items-center mx-auto" style="color: white;" data-aos="fade-left" data-aos-duration="1500">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque
             purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor rhoncus dolor purus
@@ -156,7 +170,7 @@ layout: default
     <div class="row align-items-center" style="height:80vh;" >
         <h1 class="col-12 text-center pt-6">Projects</h1>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
-            <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;">
+            <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Card title</h5>
@@ -165,7 +179,7 @@ layout: default
             </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
-            <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;">
+            <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;" data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Card title</h5>
@@ -174,7 +188,7 @@ layout: default
             </div>
         </div>
         <div class="col-12 col-sm-6 py-3 col-lg-4 mx-sm-auto mx-lg-0">
-            <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;">
+            <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;" data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Card title</h5>
@@ -351,5 +365,9 @@ layout: default
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
 
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 <!---------------------------------------------------- End Script ----------------------------------------------------->
