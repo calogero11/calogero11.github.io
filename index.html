@@ -10,8 +10,8 @@ layout: default
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 font-quicksand">
+            <li class="nav-item ">
                 <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
             </li>
             <li class="nav-item">
@@ -39,10 +39,10 @@ layout: default
 <!--------------------------------------------------- Home Section ---------------------------------------------------->
 <div id="index" class="row align-items-center fullscreen bg-fixed text-white m-0" style="background-image: url('assets/images/index-background-dark.png');">
     <div id="indexText" class="col text-center">
-        <h1 class="font-UnifrakturMaguntia">
+        <h1 class="font-UnifrakturMaguntia title1">
             Calogero Prestifilippo
         </h1>
-        <h3>
+        <h3 class="sub-title1 font-Kanit">
             A DEVELOPER WITH PASSION
         </h3>
     </div>
@@ -60,7 +60,7 @@ layout: default
                 </h1>
                 <button id="consoleRenew" onclick="consoleRenew()" class="float-bottom btn">Yes</button>
             </div>
-            <div id="console" data-aos="fade-right" data-aos-duration="1500" class="col-7 rounded mx-auto rm-my-lg" style="background-color: #cdcdcd; height: 12.4em;">
+            <div id="console" data-aos="fade-right" data-aos-duration="1500" class="col-11 col-sm-9 col-md-8 col-lg-7 rounded mx-auto rm-my-lg" style="background-color: #cdcdcd; height: 12.4em;">
                 <button onclick="exitConsole()" class="bg-danger console__btn mt-2 mb-3"></button>
                 <button class="bg-warning console__btn mt-2 mb-3"></button>
                 <button class="bg-success console__btn mt-2 mb-3"></button>
@@ -90,36 +90,39 @@ layout: default
     </div>
     <div class="col-12 col-lg-6">
         <div id="introPara" class="col-10 my-lg rm-mb-lg mx-auto text-center text-lg-left" data-aos="fade-left" data-aos-duration="1500">
-            <h1>
+            <h1 class="font-Kanit">
                 HOW IT ALL STARTED...
             </h1>
-            <p>
-                Imagine...Imagine this. Dave is a incredibly motivated student and he wants to achieve top results and
-                so do his parents but, he's at a little disadvantage. He has no technology and his parents wants to
-                keep everything old school nevertheless the more he put effort in, the more he spent time revising, the
-                more inefficient he was compared to his friends where they could find information rapidly instead Dave
-                was at home wasting time through book, trying his best to find the precised information but still
-                incapable to keep up. Do you really want to be a Dave?
-            </p>
-            <button id="collapseParagraph2Button" class="btn btn-white d-sm-none text-center" type="button" data-toggle="collapse" data-target="#collapseParagraph2Div" aria-expanded="false" aria-controls="collapseParagraph2Div">
-                ...
-            </button>
-            <div class="collapse" id="collapseParagraph2Div" >
-                <div id="collapseParagraph2" class="card card-body" style="background-color: black;">
-                    When I was a child I didn't understand the power of technology until I gave my first instruction to a
+            <div class="content2">
+                <p class="font-quicksand">
+                    Imagine...Imagine this. Dave is a incredibly motivated student and he wants to achieve top results and
+                    so do his parents but, he's at a little disadvantage. He has no technology and his parents wants to
+                    keep everything old school nevertheless the more he put effort in, the more he spent time revising, the
+                    more inefficient he was compared to his friends where they could find information rapidly instead Dave
+                    was at home wasting time through book, trying his best to find the precised information but still
+                    incapable to keep up. Do you really want to be a Dave?
+                </p>
+                <button id="collapseParagraph2Button" class="btn btn-white d-sm-none text-center d-lg-inline d-xl-none" type="button" data-toggle="collapse" data-target="#collapseParagraph2Div" aria-expanded="false" aria-controls="collapseParagraph2Div">
+                    ...
+                </button>
+                <div class="collapse" id="collapseParagraph2Div" >
+                    <div id="collapseParagraph2" class="card card-body font-quicksand" style="background-color: black;">
+                        When I was a child I never understood the power of technology until I gave my first instruction to a
+                        machine; print('Hello world'). Since then my passion to programming has been crescendo and iv'e been
+                        acknowledging the technology around me programmed to help us, to make our everyday tasks easier and more
+                        efficient. In addition I knew if I wanted to be a developer and achieve my dreams I had to be ahead of
+                        my game as a developer's life is tremendously competitive...
+                    </div>
+                </div>
+                <p class="d-none d-sm-inline d-lg-none d-xl-inline font-quicksand">
+                    When I was a child I never understood the power of technology until I gave my first instruction to a
                     machine; print('Hello world'). Since then my passion to programming has been crescendo and iv'e been
                     acknowledging the technology around me programmed to help us, to make our everyday tasks easier and more
                     efficient. In addition I knew if I wanted to be a developer and achieve my dreams I had to be ahead of
                     my game as a developer's life is tremendously competitive...
-                </div>
+                </p>
             </div>
-            <p class="d-none d-sm-inline">
-                When I was a child I didn't understand the power of technology until I gave my first instruction to a
-                machine; print('Hello world'). Since then my passion to programming has been crescendo and iv'e been
-                acknowledging the technology around me programmed to help us, to make our everyday tasks easier and more
-                efficient. In addition I knew if I wanted to be a developer and achieve my dreams I had to be ahead of
-                my game as a developer's life is tremendously competitive...
-            </p>
+
         </div>
     </div>
 </div>
@@ -128,7 +131,7 @@ layout: default
 <!-------------------------------------------------- Laravel Section -------------------------------------------------->
 <div id="laravel" class="fullscreen row text-white bg-info m-0">
         <div id="laravelTitle" class="col-4 col-md-3 fullscreen text-info bg-white" style="font-size: 8vh;">
-        <div class="pt-6 font-Kanit">
+        <div class="pt-6 font-quicksand">
             <div data-aos="fade-right">
                 <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
             </div>
@@ -152,8 +155,8 @@ layout: default
             </div>
         </div>
     </div>
-    <div id="laravelPara" class="col-6 col-md-5 row align-items-center mx-auto" style="color: white;" data-aos="fade-left" data-aos-duration="1500">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    <div id="laravelPara" class="col-6 col-md-5 row align-items-center mx-auto font-quicksand" data-aos="fade-left" data-aos-duration="1500">
+        <p class="content1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque
             purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor rhoncus dolor purus
             non enim. Non odio euismod lacinia at quis risus sed vulputate odio. Diam maecenas ultricies mi eget.
@@ -168,31 +171,31 @@ layout: default
 <!-------------------------------------------------- Projects Section ------------------------------------------------->
 <div id="projects" class="fullscreen text-white bg-info">
     <div class="row align-items-center m-0" style="height:80vh;" >
-        <h1 class="col-12 text-center pt-6">Projects</h1>
+        <h1 class="col-12 text-center pt-6 font-Kanit">Projects</h1>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
             <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">e magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
+                    <h5 class="card-title font-Kanit">Card title</h5>
+                    <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
-            <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;" data-aos="zoom-in-up">
+            <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">e magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
+                    <h5 class="card-title font-Kanit">Card title</h5>
+                    <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-6 py-3 col-lg-4 mx-sm-auto mx-lg-0">
-            <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;" data-aos="zoom-in-up">
+            <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
                 <img src="..." class="card-img" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">e magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
+                    <h5 class="card-title font-Kanit">Card title</h5>
+                    <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
                 </div>
             </div>
         </div>
@@ -202,7 +205,7 @@ layout: default
 
 <!-------------------------------------------------- Languages Section ------------------------------------------------->
 <div id="languages" class="text-white bg-info">
-    <h2 class="text-center pt-6 pb-3">Languages, Framworks & Technologies</h2>
+    <h2 class="text-center pt-6 pb-3 font-Kanit">Languages, Framworks & Technologies</h2>
     <div class="col-11 mx-auto pb-6">
         <div class="row">
             <div class="col-4 col-sm-3 col-md-2 languages-square bg-danger">
