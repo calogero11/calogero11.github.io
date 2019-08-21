@@ -27,7 +27,7 @@ layout: default
                 <a class="nav-link" href="#languages" onclick="smoothScroll()">Languages</a>
             </li>
             <li class="nav-item">
-                <audio id="audio" src="assets/audio/light-switch.wav" autoplay="false" ></audio>
+                <audio id="audio" src="assets/audio/light-switch.wav"></audio>
                 <button class="btn btn-warning" id="dark" onclick="changeTheme('info', 'white', 'dark', 'light');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
                 <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeTheme('white', 'info', 'light', 'dark');"><i class="far fa-lightbulb fa-1x"></i></button>
             </li>
@@ -37,7 +37,7 @@ layout: default
 <!-------------------------------------------------- End Navigation --------------------------------------------------->
 
 <!--------------------------------------------------- Home Section ---------------------------------------------------->
-<div id="index" class="row align-items-center fullscreen bg-fixed text-white" style="background-image: url(assets/images/index-background-dark.png);">
+<div id="index" class="row align-items-center fullscreen bg-fixed text-white m-0" style="background-image: url('assets/images/index-background-dark.png');">
     <div id="indexText" class="col text-center">
         <h1 class="font-UnifrakturMaguntia">
             Calogero Prestifilippo
@@ -50,7 +50,7 @@ layout: default
 <!------------------------------------------------- End Home Section -------------------------------------------------->
 
 <!--------------------------------------------------- Intro Section --------------------------------------------------->
-<div id="intro" class="row align-items-center fullscreen-lg text-white bg-info">
+<div id="intro" class="row align-items-center fullscreen-lg text-white bg-info m-0">
     <div class="col-12 col-lg-6">
         <div class="row d-block">
             <div id="exitConsoleMessageDiv" class="col-7 rm-my-lg mx-auto d-none">
@@ -126,7 +126,7 @@ layout: default
 <!------------------------------------------------- End Intro Section ------------------------------------------------->
 
 <!-------------------------------------------------- Laravel Section -------------------------------------------------->
-<div id="laravel" class="fullscreen row text-white bg-info">
+<div id="laravel" class="fullscreen row text-white bg-info m-0">
         <div id="laravelTitle" class="col-4 col-md-3 fullscreen text-info bg-white" style="font-size: 8vh;">
         <div class="pt-6 font-Kanit">
             <p class=" mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
@@ -152,8 +152,8 @@ layout: default
 <!------------------------------------------------ End Laravel Section ------------------------------------------------>
 
 <!-------------------------------------------------- Projects Section ------------------------------------------------->
-<div id="projects" class="fullscreen text-white bg-info"">
-    <div class="row align-items-center" style="height:80vh;" >
+<div id="projects" class="fullscreen text-white bg-info">
+    <div class="row align-items-center m-0" style="height:80vh;" >
         <h1 class="col-12 text-center pt-6">Projects</h1>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
             <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;">
