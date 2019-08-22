@@ -127,9 +127,6 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .languages-square {
-    height: calc(275vw/18);
-  }
 
   .title1 {
     font-size: 80px !important;
@@ -142,7 +139,9 @@ html {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .languages-square {
+    height: calc(275vw/18);
+  }
 
   .my-lg {
     margin-top: 85px;
