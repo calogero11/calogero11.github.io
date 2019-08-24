@@ -27,9 +27,17 @@ layout: default
                 <a class="nav-link" href="#languages" onclick="smoothScroll()">Languages</a>
             </li>
             <li class="nav-item">
-                <audio id="audio" src="assets/audio/light-switch.wav"></audio>
-                <button class="btn btn-warning" id="dark" onclick="changeTheme('info', 'white', 'dark', 'light');" style="display: none; border-radius: 50%;"><i class="far fa-lightbulb fa-1x"></i></button>
-                <button class="btn btn-white" style="border-radius: 50%;" id="light" onclick="changeTheme('white', 'info', 'light', 'dark');"><i class="far fa-lightbulb fa-1x"></i></button>
+
+                <div class="icons" onclick="changeTheme('info', 'white', 'dark', 'light');" id="dark" style="display: none;">
+                    <i class="far fa-sun icon-default layers" style="color: #fff800;"></i>
+                    <i class="far fa-moon icon-hover layers" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="icons" onclick="changeTheme('white', 'info', 'light', 'dark');" id="light">
+                    <i class="far fa-moon icon-default layers" style="color: #ffffff;"></i>
+                    <i class="far fa-sun icon-hover layers" style="color: #fff800;"></i>
+                </div>
+
             </li>
         </ul>
     </div>
@@ -315,9 +323,8 @@ layout: default
 
     // <!---------------------------------------------- Theme Function ------------------------------------------------>
     function changeTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
-        document.getElementById("audio").play();
         document.getElementById(mainTheme).style.display = 'none';
-        document.getElementById(secondaryTheme).style.display = 'inline';
+        document.getElementById(secondaryTheme).style.display = '';
         changePagesTheme(mainColour, secondaryColour, mainTheme);
         changeCardsTheme(mainColour, secondaryColour);
         changeNavbarTheme(mainTheme, secondaryTheme);

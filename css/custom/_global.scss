@@ -5,6 +5,50 @@ html {
   overflow-x: hidden;
 }
 
+.btn-white {
+  background-color: white;
+}
+
+.icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 40px;
+  width: 40px;
+}
+
+.layers {
+  position: absolute;
+  display: block;
+}
+
+.icon-default {
+  transition: opacity .3s, transform .3s;
+}
+
+.icon-hover {
+  transition: opacity .3s, transform .3s;
+  transform: rotate(-180deg) scale(.5);
+  opacity: 0;
+}
+
+.icons:hover {
+
+  .icon-hover {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  .icon-default {
+    transform: rotate(180deg) scale(.5);
+    opacity: 0;
+  }
+}
+
 .title1 {
   font-size: 60px !important;
 }
