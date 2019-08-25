@@ -47,11 +47,20 @@ layout: default
 <!--------------------------------------------------- Home Section ---------------------------------------------------->
 <div id="index" class="row align-items-center fullscreen bg-fixed text-white m-0" style="background-image: url('assets/images/index-background-dark.png');">
     <div id="indexText" class="col text-center">
-        <h1 class="font-UnifrakturMaguntia title1">
+        <h1 class="font-UnifrakturMaguntia title1 glitch">
             Calogero Prestifilippo
         </h1>
         <h3 class="sub-title1 font-Kanit">
-            A DEVELOPER WITH PASSION
+            A DEVELOPER WITH
+            <span class="glitch sub-title1 font-Kanit" data-text="PASSION" id="glitch1">
+                PASSION
+            </span>
+            <span class="glitch sub-title1 font-Kanit" data-text="MOTIVATION" id="glitch2" style="display: none;">
+                MOTIVATION
+            </span>
+            <span class="glitch sub-title1 font-Kanit" data-text="DETERMINATION" id="glitch3" style="display: none;">
+                DETERMINATION
+            </span>
         </h3>
     </div>
 </div>
@@ -365,6 +374,29 @@ layout: default
     }
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
+
+    // <!------------------------------------------ Glitch Change Function -------------------------------------------->
+
+    var current = 1;
+
+    setInterval(change, 3000);
+
+    function change() {
+        if (current < 3) {
+            current++;
+            previous = current - 1;
+        }
+        else {
+            current = 1;
+            previous = 3;
+        }
+
+        document.getElementById('glitch' + current).style.display = '';
+        document.getElementById('glitch' + previous).style.display = 'none';
+
+    }
+
+    // <!---------------------------------------- End Glitch Change Function ------------------------------------------>
 
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
