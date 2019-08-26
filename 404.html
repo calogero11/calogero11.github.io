@@ -1,0 +1,207 @@
+---
+layout: default
+---
+
+<!---------------------------------------------------- Navigation ----------------------------------------------------->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 font-quicksand">
+            <li class="nav-item ">
+                <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#intro" onclick="smoothScroll()">Intro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#laravel" onclick="smoothScroll()">Laravel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects" onclick="smoothScroll()">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#languages" onclick="smoothScroll()">Languages</a>
+            </li>
+            <li class="nav-item">
+
+                <div class="icons" onclick="changeTheme('info', 'white', 'dark', 'light');" id="dark" style="display: none;">
+                    <i class="far fa-sun icon-default layers" style="color: #fff800;"></i>
+                    <i class="far fa-moon icon-hover layers" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="icons" onclick="changeTheme('white', 'info', 'light', 'dark');" id="light">
+                    <i class="far fa-moon icon-default layers" style="color: #ffffff;"></i>
+                    <i class="far fa-sun icon-hover layers" style="color: #fff800;"></i>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-------------------------------------------------- End Navigation --------------------------------------------------->
+
+<!--------------------------------------------------- 404 Section ---------------------------------------------------->
+<div id="index" class="row align-items-center fullscreen bg-fixed text-white m-0 of-hidden" style="background-image: url('assets/images/index-background-dark.png');">
+    <div id="indexText" class="col text-center">
+        <h1 class="font-UnifrakturMaguntia title1 glitch">
+            Calogero Prestifilippo
+        </h1>
+        <h3 class="sub-title1 font-Kanit">
+            A DEVELOPER WITH
+            <span class="glitch sub-title1 font-Kanit" data-text="PASSION" id="glitch1">
+                PASSION
+            </span>
+            <span class="glitch sub-title1 font-Kanit" data-text="MOTIVATION" id="glitch2" style="display: none;">
+                MOTIVATION
+            </span>
+            <span class="glitch sub-title1 font-Kanit" data-text="DETERMINATION" id="glitch3" style="display: none;">
+                DETERMINATION
+            </span>
+        </h3>
+    </div>
+</div>
+<!------------------------------------------------- End 404 Section -------------------------------------------------->
+
+
+<!------------------------------------------------------ Script ------------------------------------------------------->
+<script>
+
+    // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
+
+    function smoothScroll() {
+        event.preventDefault();
+        const target = event.currentTarget.getAttribute('href');
+        window.scrollTo({
+            top: document.querySelector(target).offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
+    // <!----------------------------------------- End Smooth Scroll Function ----------------------------------------->
+
+    // <!-------------------------------------------- TypeWriter Function --------------------------------------------->
+
+    var i = 0;
+    var txt = 'Hello World';
+    var speed = 300;
+    var elementTarget = document.getElementById("index");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight - 1)) {
+            typeWriter();
+        }
+    });
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("app").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    // <!------------------------------------------ End TypeWriter Function ------------------------------------------->
+
+    // <!--------------------------------------------- Exit IDE Function ---------------------------------------------->
+
+    function exitConsole() {
+        document.getElementById('console').style.display = 'none';
+        $('#exitConsoleMessageDiv').removeClass('d-none');
+        exitTypeWriter()
+    }
+
+    var x = 0;
+    var speed1 = 100;
+    var exitMessage = 'Did you exit Console by accident?';
+
+    function exitTypeWriter() {
+        if (x < exitMessage.length) {
+            document.getElementById("exitConsoleMessage").innerHTML += exitMessage.charAt(x);
+            x++;
+            setTimeout(exitTypeWriter, speed1);
+        }
+    }
+
+    function consoleRenew() {
+        $('#exitConsoleMessageDiv').addClass('d-none');
+        document.getElementById('console').style.display = '';
+    }
+    // <!------------------------------------------- End Exit IDE Function -------------------------------------------->
+
+    // <!---------------------------------------------- Theme Function ------------------------------------------------>
+    function changeTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
+        document.getElementById(mainTheme).style.display = 'none';
+        document.getElementById(secondaryTheme).style.display = '';
+        changePagesTheme(mainColour, secondaryColour, mainTheme);
+        changeCardsTheme(mainColour, secondaryColour);
+        changeNavbarTheme(mainTheme, secondaryTheme);
+    }
+
+    function changeNavbarTheme(mainTheme, secondaryTheme) {
+        $('#navbar').removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme).removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme);
+        document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
+    }
+
+    function changePagesTheme(mainColour, secondaryColour, mainTheme) {
+        var pages = [
+            $('#intro'),
+            $('#laravel'),
+            $('#projects'),
+            $('#languages')
+        ];
+
+        pages.forEach(function(page) {
+         page.removeClass('bg-' + secondaryColour).addClass('bg-'+ mainColour).removeClass('text-' + mainColour).addClass('text-'+ secondaryColour);
+        });
+
+        $('#index').removeClass('text-' + mainColour).addClass('text-' + secondaryColour);
+        document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + mainTheme + ".png')";
+    }
+
+    function changeCardsTheme(mainColour, secondaryColour) {
+        var cards = [
+            $('#laravelTitle'),
+            $('#project1'),
+            $('#project2'),
+            $('#project3')
+        ];
+
+        cards.forEach(function(card) {
+            card.removeClass('bg-' + mainColour).addClass('bg-'+ secondaryColour).removeClass('text-' + secondaryColour).addClass('text-'+ mainColour);
+        });
+    }
+
+    // <!-------------------------------------------- End Theme Function ---------------------------------------------->
+
+    // <!------------------------------------------ Glitch Change Function -------------------------------------------->
+
+    var current = 1;
+
+    setInterval(change, 3000);
+
+    function change() {
+        if (current < 3) {
+            current++;
+            previous = current - 1;
+        }
+        else {
+            current = 1;
+            previous = 3;
+        }
+
+        document.getElementById('glitch' + current).style.display = '';
+        document.getElementById('glitch' + previous).style.display = 'none';
+
+    }
+
+    // <!---------------------------------------- End Glitch Change Function ------------------------------------------>
+
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!---------------------------------------------------- End Script ----------------------------------------------------->
