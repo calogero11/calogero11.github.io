@@ -7,6 +7,6 @@ url:
 baseurl:          /
 
 # Build settings
-permalink: : /404.html
+permalink: :title/
 sass:
   sass_dir: css
