@@ -258,9 +258,34 @@ html {
   margin-top: 85px;
 }
 
-.languages-square {
-  height: 30.5555555555555555555555555555555555555555555vw;
+.box {
+  overflow-y:hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+  height: 150px;
+  margin: 0;
+}
 
+.scroll {
+  animation: scroll 20s linear infinite;
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-2095px, 0);
+  }
+}
+
+.languages-square {
+  height: 150px;
+  display: inline-block;
+  margin-right: -5px;
+  width: 150px;
 }
 
 .font-quicksand {
@@ -278,8 +303,28 @@ html {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .box {
+    overflow-y:hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    height: 200px;
+    margin: 0;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-2795px, 0);
+    }
+  }
+
   .languages-square {
-    height: calc(275vw/12);
+    height: 200px;
+    display: inline-block;
+    margin-right: -5px;
+    width: 200px;
   }
 }
 
@@ -297,9 +342,7 @@ html {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .languages-square {
-    height: calc(275vw/18);
-  }
+
 
   .my-lg {
     margin-top: 85px;
