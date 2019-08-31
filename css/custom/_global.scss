@@ -300,6 +300,47 @@ html {
   font-size: 14px !important;
 }
 
+.contact-linked-in {
+  text-decoration:none;
+  color: white;
+}
+
+.contact-linked-in:hover {
+  text-decoration:none;
+  color: #007dff;
+}
+
+.contact-github {
+  text-decoration:none;
+  color: white;
+}
+
+.contact-github:hover {
+  text-decoration:none;
+  color: #ff3a00;
+}
+
+.contact-insta {
+  text-decoration:none;
+  color: #ffffff;
+}
+
+.contact-insta:hover {
+  text-decoration:none;
+  color: #f600ff;
+
+}
+
+.pic-me-card {
+  height: calc(200vw/3);
+}
+
+.pic-me {
+  position:relative;
+  top:2rem;
+  left:0;
+}
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -309,6 +350,12 @@ html {
     white-space: nowrap;
     height: 200px;
     margin: 0;
+  }
+
+  .pic-me {
+    position:relative;
+    top:3rem;
+    left:0;
   }
 
   @keyframes scroll {
@@ -337,6 +384,16 @@ html {
 
   .sub-title1 {
     font-size: 25px !important;
+  }
+
+  .pic-me-card {
+    height: calc(100vw/3);
+  }
+
+  .pic-me {
+    position:relative;
+    top:2rem;
+    left:0;
   }
 }
 
@@ -370,9 +427,17 @@ html {
     font-size: 16px !important;
   }
 
+  .pic-me {
+    position:relative;
+    top:3rem;
+    left:0;
+  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+  .fullscreen-xl {
+    height: 100vh;
+  }
 }
