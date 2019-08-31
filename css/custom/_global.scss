@@ -341,6 +341,27 @@ html {
   left:0;
 }
 
+.footer-text {
+ margin-top: 3rem;
+}
+
+.hands {
+  animation: hands-up 1s infinite;
+  margin-top: 6rem;
+}
+
+@keyframes hands-up {
+  0% {
+    margin-top: 6rem;
+  }
+  50% {
+    margin-top: 1rem;
+  }
+  100% {
+    margin-top: 6rem;
+  }
+}
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
