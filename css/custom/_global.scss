@@ -97,28 +97,6 @@ html {
   100% { @include rect(38px, 49px); }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .btn-white {
   background-color: white;
 }
@@ -249,7 +227,7 @@ html {
   height: 15px;
   text-align: center;
   line-height: 1.428571429;
-  border-radius: 7.5px;
+  border-radius: 50%;
   float: left;
 }
 
