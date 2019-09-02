@@ -5,13 +5,13 @@ layout: default
 <!---------------------------------------------------- Navigation ----------------------------------------------------->
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="navbarBtn" onclick="collapsedCheck()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 font-quicksand">
-            <li class="nav-item ">
+        <ul class="navbar-nav ml-auto font-quicksand">
+            <li class="nav-item">
                 <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
             </li>
             <li class="nav-item">
@@ -463,6 +463,17 @@ layout: default
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+    function collapsedCheck() {
+        var test = document.getElementById("navbarBtn");
+        var testClass = test.classList.contains('collapsed');
+
+        if (testClass) {
+            $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
+        }
+        else {
+            $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
+        }
+    }
 
     // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
 
@@ -479,12 +490,12 @@ layout: default
 
     // <!-------------------------------------------- TypeWriter Function --------------------------------------------->
 
-    var i = 0;
-    var txt = 'Hello World';
-    var speed = 300;
-    var elementTarget = document.getElementById("index");
+    var i = 0,
+        txt = 'Hello World',
+        speed = 300,
+        elementTarget = document.getElementById('index');
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener('scroll', function() {
         if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight - 1)) {
             typeWriter();
         }
@@ -492,7 +503,7 @@ layout: default
 
     function typeWriter() {
         if (i < txt.length) {
-            document.getElementById("app").innerHTML += txt.charAt(i);
+            document.getElementById('app').innerHTML += txt.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
         }
@@ -507,9 +518,9 @@ layout: default
         exitTypeWriter()
     }
 
-    var x = 0;
-    var speed1 = 100;
-    var exitMessage = 'Did you exit Console by accident?';
+    var x = 0,
+        speed1 = 100,
+        exitMessage = 'Did you exit Console by accident?';
 
     function exitTypeWriter() {
         if (x < exitMessage.length) {
