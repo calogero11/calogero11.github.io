@@ -5,7 +5,7 @@ layout: default
 <!---------------------------------------------------- Navigation ----------------------------------------------------->
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
-    <button id="navbarBtn" onclick="collapsedCheck()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="navbarBtn" onclick="changeCollapsedNavbarColor()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -401,7 +401,7 @@ layout: default
         <h1 class="col-12 text-center font-Kanit">Projects</h1>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
             <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="..." class="card-img" alt="...">
+                <img src="" class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title font-Kanit">Card title</h5>
                     <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
@@ -410,7 +410,7 @@ layout: default
         </div>
         <div class="col-12 col-sm-6 col-lg-4 py-3">
             <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="..." class="card-img" alt="...">
+                <img src="" class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title font-Kanit">Card title</h5>
                     <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
@@ -419,7 +419,7 @@ layout: default
         </div>
         <div class="col-12 col-sm-6 py-3 col-lg-4 mx-sm-auto mx-lg-0">
             <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="..." class="card-img" alt="...">
+                <img src="" class="card-img" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title font-Kanit">Card title</h5>
                     <p class="card-text font-quicksand">magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a scelerisque</p>
@@ -463,17 +463,33 @@ layout: default
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
-    function collapsedCheck() {
-        var test = document.getElementById("navbarBtn");
-        var testClass = test.classList.contains('collapsed');
 
-        if (testClass) {
-            $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
+    // <!----------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
+    function changeCollapsedNavbarColor() {
+        var navbarBtn           = document.getElementById("navbarBtn"),
+            navbarCollapsed     = navbarBtn.classList.contains('collapsed'),
+            navbar              = document.getElementById("navbar"),
+            navbarDark          = navbar.classList.contains('bg-dark');
+            navbarCollapsedDark = navbar.classList.contains('bg-dark-collapsed');
+
+        if (navbarCollapsed) {
+            if(navbarDark) {
+                $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
+            }
+            else {
+                $('#navbar').removeClass('bg-light').addClass('bg-light-collapsed');
+            }
         }
         else {
-            $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
+            if(navbarCollapsedDark) {
+                $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
+            }
+            else {
+                $('#navbar').removeClass('bg-light-collapsed').addClass('bg-light');
+            }
         }
     }
+    // <!--------------------------------- End Change Collapsed Navbar Theme Function --------------------------------->
 
     // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
 
@@ -546,7 +562,12 @@ layout: default
     }
 
     function changeNavbarTheme(mainTheme, secondaryTheme) {
-        $('#navbar').removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme).removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme);
+        if(document.getElementById("navbar").classList.contains('bg-' + secondaryTheme + '-collapsed')) {
+            $('#navbar').removeClass('bg-' + secondaryTheme + '-collapsed').addClass('bg-' + mainTheme + '-collapsed' ).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
+        }
+        else {
+            $('#navbar').removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
+        }
         document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
     }
 
