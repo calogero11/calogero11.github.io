@@ -277,6 +277,7 @@ html {
 .contact-linked-in {
   text-decoration:none;
   color: white;
+  transition: 0.5s !important;
 }
 
 .contact-linked-in:hover {
@@ -287,6 +288,7 @@ html {
 .contact-github {
   text-decoration:none;
   color: white;
+  transition: 0.5s !important;
 }
 
 .contact-github:hover {
@@ -297,6 +299,7 @@ html {
 .contact-insta {
   text-decoration:none;
   color: #ffffff;
+  transition: 0.5s !important;
 }
 
 .contact-insta:hover {
@@ -361,6 +364,24 @@ html {
   height: 15px;
   line-height: 15px;
   font-size: 0.9rem;
+}
+
+.progress {
+   height: 1px !important;
+  background-color: black !important;
+  transition: 0.3s !important;
+}
+
+.sticky-top:hover {
+  .progress {
+    height: 10px !important;
+    background-color: black !important;
+  }
+}
+
+.progress-bar {
+  background-color: #ff7e00 !important;
+  transition: 0ms !important;
 }
 
 // Small devices (landscape phones, 576px and up)
