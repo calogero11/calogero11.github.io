@@ -246,8 +246,6 @@ html {
   animation: scroll 20s linear infinite;
 }
 
-
-
 @keyframes scroll {
   0% {
     transform: translate(0, 0);
@@ -352,9 +350,22 @@ html {
   background-color: rgba(255, 255, 255, .9);
 }
 
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.btn-circle-sm {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 0.9rem;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .box {
+  .cover {
     overflow-y:hidden;
     overflow-x: hidden;
     white-space: nowrap;
