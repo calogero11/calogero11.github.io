@@ -384,6 +384,10 @@ html {
   transition: 0ms !important;
 }
 
+.center-team {
+  margin-left: -3rem;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cover {
@@ -392,6 +396,10 @@ html {
     white-space: nowrap;
     height: 200px;
     margin: 0;
+  }
+
+  .center-team {
+    margin-left: -4.5rem;
   }
 
   .pic-me {
@@ -419,6 +427,9 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .center-team {
+    margin-left: -6rem;
+  }
 
   .title1 {
     font-size: 80px !important;
@@ -488,5 +499,9 @@ html {
 @media (min-width: 1200px) {
   .fullscreen-xl {
     height: 100vh;
+  }
+
+  .center-team {
+    margin-left: -7rem;
   }
 }
