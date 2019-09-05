@@ -50,6 +50,9 @@ layout: default
                     <a class="nav-link" href="#projects" onclick="smoothScroll()">Projects</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#team" onclick="smoothScroll()">Team</a>
+                </li>
+                <li class="nav-item">
 
                     <div class="icons" onclick="changeTheme('info', 'white', 'dark', 'light');" id="dark" style="display: none;">
                         <i class="far fa-sun icon-default layers" style="color: #fff800;"></i>
@@ -453,6 +456,57 @@ layout: default
 </div>
 <!------------------------------------------------ End Projects Section ----------------------------------------------->
 
+<!-------------------------------------------------- Team Section ------------------------------------------------->
+
+<div id="team" class="fullscreen text-white bg-info of-hidden row align-items-center">
+    <h1 class="text-center font-Kanit col-12">Meet The Team</h1>
+    <div class="col-4">
+        <div class="card bg-transparent p-1">
+            <div class=" bg-white card-img-top rounded-circle of-hidden" style="height: 29vw;" onmouseover="WhiteWet(this)" onmouseout="White(this)">
+                            <video id="projectManager" loop autoplay muted height="100%" src="assets/videos/white.mp4" class="center-team">
+                                Your browser does not support HTML5 video.
+                            </video>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Project Manager</h6>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-4">
+        <div class="card bg-transparent p-1">
+            <div class=" bg-white card-img-top rounded-circle of-hidden" style="height: 29vw;" onmouseover="GreenWet(this)" onmouseout="Green(this)">
+                            <video id="tester" loop autoplay muted height="100%" src="assets/videos/green.mp4" class="center-team">
+                                Your browser does not support HTML5 video.
+                            </video>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tester</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card bg-transparent p-1">
+            <div class=" bg-white card-img-top rounded-circle of-hidden" style="height: 29vw;" onmouseover="BlackWet(this)" onmouseout="Black(this)">
+                            <video id="developer" loop autoplay muted height="100%" src="assets/videos/black.mp4" class="center-team">
+                                Your browser does not support HTML5 video.
+                            </video>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Developer</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+            </div>
+    </div>
+
+</div>
+
+</div>
+<!------------------------------------------------ End Team Section ----------------------------------------------->
+
 <!--------------------------------------------------- Footer Section -------------------------------------------------->
 
 <div class="bg-info">
@@ -488,6 +542,81 @@ layout: default
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+
+    function BlackWet() {
+        setTimeout( function(){
+            document.getElementById('developer').src = "assets/videos/black-wet.mp4";
+            setTimeout( function(){
+                document.getElementById('developer').src = "assets/videos/black.mp4";
+            }, 7940);
+        }, 1100);
+        setTimeout( function(){
+            document.getElementById('tester').src = "assets/videos/green-dodging-left.mp4";
+            setTimeout( function(){
+                document.getElementById('tester').src = "assets/videos/green.mp4";
+            }, 3290);
+        }, 2000);
+        document.getElementById('projectManager').src = "assets/videos/white-throwing.mp4";
+        setTimeout( function(){
+            document.getElementById('projectManager').src = "assets/videos/white.mp4";
+        }, 8060);
+    }
+
+    function Black() {
+        document.getElementById('developer').src="assets/videos/black.mp4";
+        document.getElementById('tester').src = "assets/videos/green.mp4";
+        document.getElementById('projectManager').src = "assets/videos/white.mp4";
+    }
+
+    function WhiteWet() {
+        setTimeout( function(){
+            document.getElementById('projectManager').src = "assets/videos/white-wet.mp4";
+            setTimeout( function(){
+                document.getElementById('projectManager').src = "assets/videos/white.mp4";
+            }, 4840);
+        }, 2500);
+        setTimeout( function(){
+            document.getElementById('tester').src = "assets/videos/green-dodging-right.mp4";
+            setTimeout( function(){
+                document.getElementById('tester').src = "assets/videos/green.mp4";
+            }, 1990);
+        }, 3500);
+        document.getElementById('developer').src = "assets/videos/black-throwing.mp4";
+        setTimeout( function(){
+            document.getElementById('developer').src = "assets/videos/black.mp4";
+        }, 8680);
+    }
+
+    function White() {
+        document.getElementById('projectManager').src = "assets/videos/white.mp4";
+        document.getElementById('developer').src = "assets/videos/black.mp4";
+        document.getElementById('tester').src = "assets/videos/green.mp4";
+    }
+
+    function GreenWet() {
+        setTimeout( function() {
+            document.getElementById('tester').src = "assets/videos/green-wet.mp4";
+            setTimeout( function() {
+                document.getElementById('tester').src = "assets/videos/green.mp4";
+            }, 3630);
+        }, 2500);
+        setTimeout( function() {
+            document.getElementById('projectManager').src = "assets/videos/white-throwing.mp4";
+            setTimeout( function(){
+                document.getElementById('projectManager').src = "assets/videos/white.mp4";
+            }, 8060);
+        }, 500);
+        document.getElementById('developer').src = "assets/videos/black-throwing.mp4";
+        setTimeout( function(){
+            document.getElementById('developer').src = "assets/videos/black.mp4";
+        }, 8680);
+    }
+
+    function Green() {
+        document.getElementById('tester').src = "assets/videos/green.mp4";
+        document.getElementById('developer').src = "assets/videos/black.mp4";
+        document.getElementById('projectManager').src = "assets/videos/white.mp4";
+    }
 
     // <!----------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
     function changeCollapsedNavbarColor() {
