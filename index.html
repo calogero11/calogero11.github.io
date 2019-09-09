@@ -25,51 +25,53 @@ layout: default
 <!------------------------------------------------- End Home Section -------------------------------------------------->
 
 <!---------------------------------------------------- Navigation ----------------------------------------------------->
-<div class="sticky-top">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
-        <button id="navbarBtn" onclick="changeCollapsedNavbarColor()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="bg-info" style="height: 75px; width: 100vw;">
+    <div id="navbarDiv">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
+            <button id="navbarBtn" onclick="changeCollapsedNavbarColor()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto font-quicksand">
-                <li class="nav-item">
-                    <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#aboutMe" onclick="smoothScroll()">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#intro" onclick="smoothScroll()">Intro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#laravel" onclick="smoothScroll()">Laravel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects" onclick="smoothScroll()">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team" onclick="smoothScroll()">Team</a>
-                </li>
-                <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto font-quicksand">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#index" onclick="smoothScroll()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutMe" onclick="smoothScroll()">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro" onclick="smoothScroll()">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#laravel" onclick="smoothScroll()">Laravel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" onclick="smoothScroll()">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team" onclick="smoothScroll()">Team</a>
+                    </li>
+                    <li class="nav-item">
 
-                    <div class="icons" onclick="changeTheme('info', 'white', 'dark', 'light');" id="dark" style="display: none;">
-                        <i class="far fa-sun icon-default layers" style="color: #fff800;"></i>
-                        <i class="far fa-moon icon-hover layers" style="color: #000000;"></i>
-                    </div>
+                        <div class="icons" onclick="changeTheme('info', 'white', 'dark', 'light');" id="dark" style="display: none;">
+                            <i class="far fa-sun icon-default layers" style="color: #fff800;"></i>
+                            <i class="far fa-moon icon-hover layers" style="color: #000000;"></i>
+                        </div>
 
-                    <div class="icons" onclick="changeTheme('white', 'info', 'light', 'dark');" id="light">
-                        <i class="far fa-moon icon-default layers" style="color: #ffffff;"></i>
-                        <i class="far fa-sun icon-hover layers" style="color: #fff800;"></i>
-                    </div>
+                        <div class="icons" onclick="changeTheme('white', 'info', 'light', 'dark');" id="light">
+                            <i class="far fa-moon icon-default layers" style="color: #ffffff;"></i>
+                            <i class="far fa-sun icon-hover layers" style="color: #fff800;"></i>
+                        </div>
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
         </div>
-    </nav>
-    <div class="progress">
-        <div id="progressBar" class="progress-bar"></div>
     </div>
 </div>
 
@@ -302,7 +304,7 @@ layout: default
                 <button id="consoleRenew" onclick="consoleRenew()" class="float-bottom btn">Yes</button>
             </div>
             <div id="console" data-aos="fade-right" data-aos-duration="1500" class="col-11 col-sm-9 col-md-8 col-lg-7 rounded mx-auto rm-my-lg" style="background-color: #d8d8d8; height: 11.4em;">
-                <button class="btn-danger btn-circle-sm m-1 float-left" onclick="exitConsole()"></button>
+                <button class="btn-danger rounded-circle m-1 float-left" onclick="exitConsole()" style="height: 15px; width: 15px;"></button>
                 <button class="btn-warning btn-circle-sm m-1 float-left"></button>
                 <button class="btn-success btn-circle-sm m-1 float-left"></button>
                 <p class="text-center mr-6 text-info my-auto">
@@ -543,6 +545,29 @@ layout: default
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
 
+    // <!------------------------------------------ Sticky Navbar Function -------------------------------------------->
+    index = document.getElementById('index');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > (index.offsetTop + index.offsetHeight - 1)) {
+            stickyNavbar();
+        }
+        else {
+            removeStickyNavbar();
+        }
+    });
+
+    function stickyNavbar() {
+        document.getElementById('navbarDiv').classList.add("sticky");
+    }
+
+    function  removeStickyNavbar() {
+        document.getElementById('navbarDiv').classList.remove("sticky");
+    }
+    // <!----------------------------------------- End Sticky Navbar Function ----------------------------------------->
+
+
+    // <!----------------------------------------------- Team Function ------------------------------------------------>
     function BlackWet() {
         setTimeout( function(){
             document.getElementById('developer').src = "assets/videos/black-wet.mp4";
@@ -617,6 +642,8 @@ layout: default
         document.getElementById('developer').src = "assets/videos/black.mp4";
         document.getElementById('projectManager').src = "assets/videos/white.mp4";
     }
+    // <!--------------------------------------------- End Team Function ---------------------------------------------->
+
 
     // <!----------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
     function changeCollapsedNavbarColor() {
@@ -663,10 +690,10 @@ layout: default
     var typeWriterCounter = 0,
         typeWriterOutput = 'Hello World',
         typeWriterSpeed = 300,
-        index = document.getElementById('index');
+        languages = document.getElementById('languages');
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > (index.offsetTop + index.offsetHeight - 1)) {
+        if (window.scrollY > (languages.offsetTop + languages.offsetHeight - 1)) {
             typeWriter();
         }
     });

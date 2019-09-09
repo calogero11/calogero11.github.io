@@ -5,6 +5,13 @@ html {
   overflow-x: hidden;
 }
 
+.sticky {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 1030;
+}
+
 .flip {
   transform: rotate3d(0, 1, 0, 180deg);
 }
@@ -372,14 +379,14 @@ html {
 
 .progress {
    height: 1px !important;
-  background-color: black !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
   transition: 0.3s !important;
 }
 
 .sticky-top:hover {
   .progress {
     height: 10px !important;
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
   }
 }
 
