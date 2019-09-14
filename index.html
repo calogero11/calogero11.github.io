@@ -502,48 +502,87 @@ layout: default
                 <h5 class="card-title">Developer</h5>
                 <p class="card-text">Some quick example text to build on the card title.</p>
             </div>
+        </div>
     </div>
 
 </div>
-
-</div>
-<!------------------------------------------------ End Team Section ----------------------------------------------->
-
+<!-------------------------------------------------- End Team Section ------------------------------------------------->
 <!--------------------------------------------------- Footer Section -------------------------------------------------->
+<!------------------------------------------------- End Footer Section ------------------------------------------------>
 
-<div class="bg-info">
-    <hr class="m-0" style="background-color: white;">
-</div>
-
-<div id="footer" class="text-white of-hidden font-quicksand container-fluid" style="height:40vh; background-color: #1e1e1e;">
-    <div class="row">
-        <div class="col-3 p-0">
-            <img src="assets/images/right-hand.png" alt="right-hand" class="d-block mx-auto hands" style="width: 20vw;">
+    <div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:200px;">
+        <div class="text-center mb-5" style="height: 160px;">
+            <i class="fas fa-location-arrow fa-4x mt-5"></i>
         </div>
-        <div class="col-6 text-center p-0 footer-text">
-            <p>Everybody in this industry</p>
-            <p>Put your * hands up and follow me</p>
-            <div>
-                <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
-                    <i class="fab fa-linkedin fa-3x"></i>
-                </a>
-                <a href="https://github.com/calogero11" class="contact-github">
-                    <i class="fab fa-github fa-3x"></i>
-                </a>
-                <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
-                    <i class="fab fa-instagram fa-3x"></i>
-                </a>
+        <div style="height:100vh; background-color: #1e1e1e;">
+            <div class="row">
+                <div class="col-12 text-center p-0 mt-3 footer-text">
+                    <p>follow me on</p>
+                    <div>
+                        <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                        </a>
+                        <a href="https://github.com/calogero11" class="contact-github">
+                            <i class="fab fa-github fa-3x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
+                            <i class="fab fa-instagram fa-3x"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-3 p-0">
-            <img src="assets/images/left-hand.png" alt="left-hand" class="mx-auto d-block hands"  style="width: 20vw;">
+    </div>
+
+<div class="text-white of-hidden font-quicksand container-fluid p-0" style="height:200px;">
+    <div class="text-center mb-5" style="height: 160px;">
+        <i id="footer-icon" class="fas fa-location-arrow fa-4x mt-5"></i>
+    </div>
+    <div style="background-color: #1e1e1e;">
+        <div class="row">
+            <div class="col-12 text-center p-0 mt-3 footer-text">
+                <p>follow me on</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
+                        <i class="fab fa-linkedin fa-3x"></i>
+                    </a>
+                    <a href="https://github.com/calogero11" class="contact-github">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!------------------------------------------------- End Footer Section ------------------------------------------------>
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+
+        window.addEventListener('scroll', function() {
+            var d = document.documentElement,
+            offset = d.scrollTop + window.innerHeight,
+            height = d.offsetHeight;
+
+            if (offset === height) {
+                    document.getElementById('footer').style.display = '';
+                    document.getElementById('footer-icon').style.display = 'none';
+                setTimeout( function(){
+                    document.getElementById('footer').style.height= '126vh';
+                }, 1);
+
+            }
+
+            else {
+                document.getElementById('footer').style.height = '200px';
+                document.getElementById('footer').style.display= 'none';
+                document.getElementById('footer-icon').style.display = '';
+
+            }
+        });
+
 
     // <!------------------------------------------ Sticky Navbar Function -------------------------------------------->
     index = document.getElementById('index');
@@ -571,9 +610,6 @@ layout: default
     function BlackWet() {
         setTimeout( function(){
             document.getElementById('developer').src = "assets/videos/black-wet.mp4";
-            setTimeout( function(){
-                document.getElementById('developer').src = "assets/videos/black.mp4";
-            }, 7940);
         }, 1100);
         setTimeout( function(){
             document.getElementById('tester').src = "assets/videos/green-dodging-left.mp4";
