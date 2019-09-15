@@ -25,7 +25,7 @@ layout: default
 <!------------------------------------------------- End Home Section -------------------------------------------------->
 
 <!---------------------------------------------------- Navigation ----------------------------------------------------->
-<div class="bg-info" style="height: 75px; width: 100vw;">
+<div id="navbarHolder" class="bg-info" style="height: 75px; width: 100vw;">
     <div id="navbarDiv">
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
@@ -85,57 +85,91 @@ layout: default
             <img src="assets/images/me.png" data-aos="zoom-in-up" class="pic-me card-img-top h-100 w-100" alt="...">
         </div>
     </div>
-    <div class="col-md-6 text-center">
-        <p class="m-0 font-Kanit sub-title1">
+    <div class="col-md-6 text-center font-Kanit">
+        <p class="m-0 sub-title1">
             My Priorities
         </p>
         <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-right">
-            <div class="card">
-                <div class="card-body row align-items-center">
-                    <h5 class="card-title text-center col-12">Responsive</h5>
-                    <i class="col-2 fas fa-mobile-alt p-0 fa-2x" style="color: #5417d7;"></i>
-                    <p class="col-10 card-text text-left float-right">
-                        To make my customers enjoy my content from any device
-                    </p>
+            <div id="priority1" class="card dark-priority__card">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="priority__icon-div" style="background-color: #5417d7;">
+                            <i class="priority__icon fas fa-mobile-alt p-0"></i>
+                        </div>
+                    </div>
+                    <div class="priority__card-body col-9">
+                        <p class="dark-priority__card-title">
+                            Responsive
+                        </p>
+                        <p class="dark-priority__card-text">
+                            To make my customers enjoy my content from any device
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-left">
-            <div class="card">
-                <div class="card-body row align-items-center">
-                    <h5 class="card-title col-12">Clean</h5>
-                    <i class="col-2 fas fa-tint p-0 fa-2x" style="color: #01c6f8;"></i>
-                    <p class="col-10 card-text text-left">
-                        To make developer's can understand my code easier visually and logically
-                    </p>
-                </div>
-            </div>
-        </div>
+
         <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-right">
-            <div class="card">
-                <div class="card-body row align-items-center">
-                    <h5 class="card-title col-12">Simple</h5>
-                    <i class="col-2 fab fa-envira p-0 fa-2x" style="color: #6bda0f;"></i>
-                    <p class="col-10 card-text text-left">
-                        To give the customer a better experience and interact with ease
-                    </p>
+            <div id="priority2" class="card dark-priority__card">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="priority__icon-div" style="background-color: #01c6f8;">
+                            <i class="priority__icon fas fa-tint p-0"></i>
+                        </div>
+                    </div>
+                    <div class="priority__card-body col-9">
+                        <p class="dark-priority__card-title">
+                            Clean
+                        </p>
+                        <p class="dark-priority__card-text">
+                            To make developer's can understand my code easier visually and logically
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-left">
-            <div class="card">
-                <div class="card-body row align-items-center">
-                    <h5 class="card-title col-12">Fun</h5>
-                    <i class="col-2 fas fa-gamepad p-0 fa-2x" style="color: #ff0000;"></i>
-                    <p class="col-10 card-text text-left">
-                        To make the customer enjoy them self and make it there experiece memorable
-                    </p>
+
+        <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-right">
+            <div id="priority3" class="card dark-priority__card">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="priority__icon-div" style="background-color: #6bda0f;">
+                            <i class="priority__icon fab fa-envira p-0"></i>
+                        </div>
+                    </div>
+                    <div class="priority__card-body col-9">
+                        <p class="dark-priority__card-title">
+                            Simple
+                        </p>
+                        <p class="dark-priority__card-text">
+                            To give the customer a better experience and interact with ease
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-10 mx-auto my-3 text-info" data-aos="fade-right">
+            <div id="priority4" class="card dark-priority__card">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="priority__icon-div" style="background-color: #ff0000;">
+                            <i class="priority__icon fas fa-gamepad p-0"></i>
+                        </div>
+                    </div>
+                    <div class="priority__card-body col-9">
+                        <p class="dark-priority__card-title">
+                            Fun
+                        </p>
+                        <p class="dark-priority__card-text">
+                            To make the customer enjoy them self and make it there experience memorable
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!----------------------------------------------- End About me Section ------------------------------------------------>
 
 <!------------------------------------------------- Languages Section ------------------------------------------------->
@@ -507,9 +541,8 @@ layout: default
 
 </div>
 <!-------------------------------------------------- End Team Section ------------------------------------------------->
-<!--------------------------------------------------- Footer Section -------------------------------------------------->
-<!------------------------------------------------- End Footer Section ------------------------------------------------>
 
+<!--------------------------------------------------- Footer Section -------------------------------------------------->
     <div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:200px; display: none;">
         <div class="text-center mb-5" style="height: 160px;">
             <i class="fas fa-location-arrow fa-4x mt-5" style="transform: rotate(-45deg);"></i>
@@ -557,6 +590,7 @@ layout: default
         </div>
     </div>
 </div>
+<!------------------------------------------------- End Footer Section ------------------------------------------------>
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
@@ -774,11 +808,11 @@ layout: default
         document.getElementById(mainTheme).style.display = 'none';
         document.getElementById(secondaryTheme).style.display = '';
         changePagesTheme(mainColour, secondaryColour, mainTheme);
-        changeCardsTheme(mainColour, secondaryColour);
-        changeNavbarTheme(mainTheme, secondaryTheme);
+        changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
+        changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
     }
 
-    function changeNavbarTheme(mainTheme, secondaryTheme) {
+    function changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
         if(document.getElementById('navbar').classList.contains('bg-' + secondaryTheme + '-collapsed')) {
             $('#navbar').removeClass('bg-' + secondaryTheme + '-collapsed').addClass('bg-' + mainTheme + '-collapsed' ).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
         }
@@ -786,10 +820,13 @@ layout: default
             $('#navbar').removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
         }
         document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
+
+        $('#navbarHolder').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
     }
 
     function changePagesTheme(mainColour, secondaryColour, mainTheme) {
         var pages = [
+            $('#aboutMe'),
             $('#intro'),
             $('#laravel'),
             $('#projects'),
@@ -804,17 +841,33 @@ layout: default
         document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + mainTheme + ".png')";
     }
 
-    function changeCardsTheme(mainColour, secondaryColour) {
+    function changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme ) {
         var cards = [
             $('#laravelTitle'),
             $('#project1'),
             $('#project2'),
-            $('#project3')
+            $('#project3'),
         ];
 
         cards.forEach(function(card) {
             card.removeClass('bg-' + mainColour).addClass('bg-'+ secondaryColour).removeClass('text-' + secondaryColour).addClass('text-'+ mainColour);
         });
+
+        var priorityCards = [
+            $('#priority1'),
+            $('#priority2'),
+            $('#priority3'),
+            $('#priority4')
+        ];
+
+        priorityCards.forEach(function(priorityCard) {
+            priorityCard.removeClass(secondaryTheme + '-priority__card').addClass(mainTheme + '-priority__card');
+        });
+
+        $('.dark-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
+        $('.light-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
+        $('.dark-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
+        $('.light-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
     }
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->

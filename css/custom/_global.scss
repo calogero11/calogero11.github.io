@@ -415,6 +415,80 @@ html {
   padding: 0.5rem 1rem;
 }
 
+.dark-priority__card {
+  box-shadow: 0 20px 30px -16px rgba(239, 239, 239, 0.81);
+  background-color: #131313 !important;
+  transition: transform .2s;
+}
+
+.dark-priority__card:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.light-priority__card:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.dark-priority__card-title {
+  color: white;
+  text-align: left;
+  margin: 0;
+  font-size: 17px;
+}
+
+.dark-priority__card-text {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin: 0;
+}
+
+.light-priority__card-title {
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  font-size: 17px;
+}
+
+.light-priority__card-text {
+  text-align: left;
+  color: rgba(45, 45, 45, 0.71);
+  font-size: 14px;
+  margin: 0;
+}
+
+.priority__card-body {
+  float: right;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+.priority__icon-div {
+  margin: 1em;
+  height: 56px;
+  width: 56px;
+  align-items: center;
+  display: flex;
+}
+
+.priority__icon{
+  color:white;
+  font-size: 37px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.light-priority__card {
+  box-shadow: 0 20px 30px -16px rgba(9,9,16,.2);
+  background-color: #ffffff !important;
+  transition: transform .2s;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cover {
@@ -454,6 +528,11 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .priority__icon-div {
+    height: 72px;
+    width: 72px;
+  }
+
   .center-team {
     margin-left: -6rem;
   }
