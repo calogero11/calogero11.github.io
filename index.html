@@ -490,51 +490,35 @@ layout: default
 <!------------------------------------------------ End Projects Section ----------------------------------------------->
 
 <!--------------------------------------------------- Footer Section -------------------------------------------------->
-    <div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:200px; display: none;">
-        <div class="text-center mb-5" style="height: 160px;">
-            <i class="fas fa-location-arrow fa-4x mt-5" style="transform: rotate(-45deg);"></i>
+    <div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:10vh; display: none;">
+        <div class="text-center d-flex align-items-center" style="height: 10vh;">
+            <img src="assets/images/darkPaperPlaneActive.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
         </div>
         <div style="height:100vh; background-color: #1e1e1e;">
             <div class="row">
                 <div class="col-12 text-center p-0 mt-3 footer-text">
                     <p>follow me on</p>
-                    <div>
-                        <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
-                            <i class="fab fa-linkedin fa-3x"></i>
-                        </a>
-                        <a href="https://github.com/calogero11" class="contact-github">
-                            <i class="fab fa-github fa-3x"></i>
-                        </a>
-                        <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
-                            <i class="fab fa-instagram fa-3x"></i>
-                        </a>
+                    <div style="height: 5vh;" class="d-flex align-items-center">
+                        <div class="mx-auto">
+                            <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" target="_blank" class="contact-linked-in text-center mx-1">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/calogero11" target="_blank" class="contact-github text-center mx-1">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/calogero.codes/" target="_blank" class="contact-insta text-center mx-1">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<div class="text-white of-hidden font-quicksand container-fluid p-0" style="height:200px;">
-    <div class="text-center mb-5" style="height: 160px;">
-        <i id="footer-icon" class="fas fa-location-arrow fa-4x mt-5" style="transform: rotate(-45deg);"></i>
-    </div>
-    <div style="background-color: #1e1e1e;">
-        <div class="row">
-            <div class="col-12 text-center p-0 mt-3 footer-text">
-                <p>follow me on</p>
-                <div>
-                    <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
-                        <i class="fab fa-linkedin fa-3x"></i>
-                    </a>
-                    <a href="https://github.com/calogero11" class="contact-github">
-                        <i class="fab fa-github fa-3x"></i>
-                    </a>
-                    <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
-                        <i class="fab fa-instagram fa-3x"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="text-white of-hidden font-quicksand container-fluid p-0" style="height:10vh;">
+    <div class="text-center d-flex align-items-center" style="height: 10vh;">
+        <img id="footer-icon" src="assets/images/darkPaperPlane.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
     </div>
 </div>
 <!------------------------------------------------- End Footer Section ------------------------------------------------>
@@ -552,12 +536,12 @@ layout: default
                     document.getElementById('footer').style.display = '';
                     document.getElementById('footer-icon').style.display = 'none';
                 setTimeout( function(){
-                    document.getElementById('footer').style.height= '126vh';
+                    document.getElementById('footer').style.height= '110vh';
                 }, 1);
             }
 
             else {
-                document.getElementById('footer').style.height = '200px';
+                document.getElementById('footer').style.height = '10vh';
                 document.getElementById('footer').style.display= 'none';
                 document.getElementById('footer-icon').style.display = '';
             }
