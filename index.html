@@ -543,9 +543,15 @@ layout: default
     window.addEventListener('scroll', function() {
         if (window.scrollY > (index.offsetTop + index.offsetHeight - 1)) {
             stickyNavbar();
-        }
+            if (document.getElementById('navbarResponsive').classList.contains("hide")) {
+                $('#navbarResponsive').removeClass('hide').addClass('show');
+            }
+    }
         else {
             removeStickyNavbar();
+            if (document.getElementById('navbarResponsive').classList.contains("show")) {
+                $('#navbarResponsive').removeClass('show').addClass('hide');
+            }
         }
     });
 
