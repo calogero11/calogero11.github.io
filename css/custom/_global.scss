@@ -250,7 +250,7 @@ html {
 }
 
 .scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .sticky-top {
@@ -392,13 +392,6 @@ html {
   transition: 0.3s !important;
 }
 
-.sticky:hover {
-  .progress {
-    height: 10px !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-  }
-}
-
 .progress-bar {
   background-color: #ff7e00 !important;
   transition: 0ms !important;
@@ -492,8 +485,17 @@ html {
   transition: transform .2s;
 }
 
+.laravel {
+  font-size: 11px;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+
+  .laravel {
+    font-size: 13px;
+  }
+
   .cover {
     overflow-y:hidden;
     overflow-x: hidden;
@@ -531,6 +533,9 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .laravel {
+    font-size: 14px;
+  }
   .priority__icon-div {
     height: 72px;
     width: 72px;
@@ -561,7 +566,9 @@ html {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .laravel {
+    font-size: 15px;
+  }
   .navbar-nav {
     height: auto;
     align-items: center;
@@ -606,6 +613,9 @@ html {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .laravel {
+    font-size: 16px;
+  }
   .fullscreen-xl {
     height: 100vh;
   }
