@@ -492,6 +492,23 @@ html {
   transition: transform .2s;
 }
 
+.project__card {
+  width: 10vw;
+}
+
+.project-carousel-container {
+  height: calc(66.6666666vw + 10vh);
+}
+
+.project-active {
+  margin-top: -40px;
+  box-shadow: 0 20px 30px -16px rgba(239, 239, 239, 0.81) !important;
+}
+
+.project {
+  transition: .5s !important;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cover {
@@ -511,6 +528,11 @@ html {
     top:3rem;
     left:0;
   }
+
+  .project-carousel-container {
+    height: calc(50vw + 10vh);
+  }
+
 
   @keyframes scroll {
     0% {
@@ -602,6 +624,9 @@ html {
     left:0;
   }
 
+  .project-carousel-container {
+    height: calc(20.833333333vw + 10vh);
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)

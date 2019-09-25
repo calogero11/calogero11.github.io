@@ -446,45 +446,69 @@ layout: default
 <!------------------------------------------------ End Laravel Section ------------------------------------------------>
 
 <!-------------------------------------------------- Projects Section ------------------------------------------------->
-<div id="projects" class="fullscreen text-white bg-info of-hidden">
-    <div class="row align-items-center m-0" style="height:80vh;" >
-        <h1 class="col-12 text-center font-Kanit">Projects</h1>
-        <div class="col-12 col-sm-6 col-lg-4 py-3">
-            <div id="project1" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title font-Kanit">Card title</h5>
-                    <p class="card-text font-quicksand">
-                        magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a
-                        scelerisque
-                    </p>
+<div id="projects" class="text-white bg-info of-hidden">
+    <div class="mt-6 project-carousel-container" >
+        <h1 class="col-12 text-center font-Kanit mb-4">Projects</h1>
+
+        <div id="projectsCarousel" class="bd-example col-8 col-sm-6 mx-auto d-lg-none" style="height: calc(2vw/3);">
+            <div id="carouselExampleCaptions" class="carousel slide" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div id="carouselGymProject" class="carousel-item active">
+                        <img src="assets/images/gym-project.png" class="d-block w-100 h-100" alt="gym project">
+                    </div>
+                    <div id="carouselComingSoon" class="carousel-item">
+                        <img src="assets/images/coming-soon.png" class="d-block w-100 h-100" alt="coming soon">
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="row d-none d-lg-flex ">
+            <div class="col-6">
+                <div id="gymProject" onclick="gymProjectActive()" class="mx-auto col-5 bg-cover p-0 project project-active" style="background-image: url('assets/images/gym-project.png'); height: 20.833333333333vw;">
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="comingSoon" onclick="comingSoonActive()" class="mx-auto col-5 bg-cover p-0 project" style="background-image: url('assets/images/coming-soon.png'); height: 20.833333333333vw;">
+
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4 py-3">
-            <div id="project2" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title font-Kanit">Card title</h5>
-                    <p class="card-text font-quicksand">
-                        magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a
-                        scelerisque
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 py-3 col-lg-4 mx-sm-auto mx-lg-0">
-            <div id="project3" class="col-10 mx-auto p-2 card bg-white text-info" style=" height:20vh;"  data-aos="zoom-in-up">
-                <img src="" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title font-Kanit">Card title</h5>
-                    <p class="card-text font-quicksand">
-                        magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a
-                        scelerisque
-                    </p>
-                </div>
-            </div>
-        </div>
+
+    </div>
+
+
+    <div class="px-3" style="height: 50vh;">
+        <p id="gymProjectsContent" class="font-quicksand">
+            gym project dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a
+            scelerisque purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor
+            rhoncus dolor purus non enim. Non odio euismod lacinia at quis risus sed vulputate odio. Diam maecenas
+            ultricies mi eget. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nunc scelerisque
+            viverra mauris in aliquam sem fringilla ut morbi.
+        </p>
+        <p id="comingSoonContent" style="display: none;">
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            magna aliqua. Pellentesque habitant morbi tristique senectus et netus. Ultrices sagittis orci a
+            scelerisque purus semper. Sed elementum tempus egestas sed. Lectus magna fringilla urna porttitor
+            rhoncus dolor purus non enim. Non odio euismod lacinia at quis risus sed vulputate odio. Diam maecenas
+            ultricies mi eget. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Nunc scelerisque
+            viverra mauris in aliquam sem fringilla ut morbi.
+        </p>
     </div>
 </div>
 <!------------------------------------------------ End Projects Section ----------------------------------------------->
@@ -525,6 +549,34 @@ layout: default
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+
+    // <!---------------------------------------- Projects Content Function ------------------------------------------->
+    setInterval(function() {
+        if (document.getElementById('carouselGymProject').classList.contains('active')) {
+            document.getElementById('gymProjectsContent').style.display = '';
+            document.getElementById('comingSoonContent').style.display = 'none';
+        }
+        else if (document.getElementById('carouselComingSoon').classList.contains('active')) {
+            document.getElementById('gymProjectsContent').style.display = 'none';
+            document.getElementById('comingSoonContent').style.display = '';
+        }
+    }, 1);
+
+    function gymProjectActive() {
+        $('#gymProject').addClass('project-active');
+        $('#carouselGymProject').addClass('active');
+        $('#comingSoon').removeClass('project-active');
+        $('#carouselComingSoon').removeClass('active');
+    }
+
+    function comingSoonActive() {
+        $('#gymProject').removeClass('project-active');
+        $('#carouselGymProject').removeClass('active');
+        $('#comingSoon').addClass('project-active');
+        $('#carouselComingSoon').addClass('active');
+    }
+
+    // <!--------------------------------------- End Projects Content Function ---------------------------------------->
 
     // <!--------------------------------------------- Footer Function ------------------------------------------------>
     window.addEventListener('scroll', function() {
