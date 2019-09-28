@@ -486,14 +486,29 @@ html {
   transition: transform .2s;
 }
 
+.laravel__text {
+  font-size: 13px;
+}
+
 .laravel {
-  font-size: 11px;
+  height: 150vh;
+}
+
+.h-auto {
+  height: auto;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .h-sm-auto {
+    height: auto;
+  }
 
   .laravel {
+    height: 100vh;
+  }
+
+  .laravel__text {
     font-size: 13px;
   }
 
@@ -534,7 +549,11 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .laravel {
+  .h-md-auto {
+    height: auto;
+  }
+
+  .laravel__text {
     font-size: 14px;
   }
   .priority__icon-div {
@@ -567,9 +586,14 @@ html {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .laravel {
+  .h-lg-auto {
+    height: auto;
+  }
+
+  .laravel__text {
     font-size: 15px;
   }
+
   .navbar-nav {
     height: auto;
     align-items: center;
@@ -614,9 +638,14 @@ html {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .laravel {
+  .h-xl-auto {
+    height: auto;
+  }
+
+  .laravel__text {
     font-size: 16px;
   }
+
   .fullscreen-xl {
     height: 100vh;
   }
