@@ -391,9 +391,9 @@ layout: default
                 <p class="font-quicksand">
                     When I was younger, I really underestimated how complex technology was and I kind of thought these
                     things just ‘worked’... well, this was until I gave my first instruction to a computer;
-                    <code>
-                        &lt;p&gt; Hello World &lt;/p&gt;
-                    </code>
+                    <kbd>
+                        &lt;p&gt;Hello World&lt;/p&gt;
+                    </kbd>
                     Where I realised the complexities of some sites and applications.
                 </p>
                 <p>
@@ -404,7 +404,7 @@ layout: default
                     ...
                 </button>
                 <div class="collapse" id="collapseParagraph2Div" >
-                    <div id="collapseParagraph2" class="card card-body font-quicksand" style="background-color: black;">
+                    <div id="collapseParagraph2" class="card card-body font-quicksand bg-info">
                         <p>
                             With the acknowledgment comes understanding - which is why I decided to learn how to code.
                             Initially it started with the help of teachers, tutorials and late nights where things just
@@ -764,6 +764,7 @@ layout: default
         $('.light-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
         $('.dark-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
         $('.light-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
+        $('#collapseParagraph2').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
     }
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
