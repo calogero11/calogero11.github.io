@@ -486,11 +486,11 @@ html {
 }
 
 .laravel__text {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .laravel {
-  height: 150vh;
+  height: 160vh;
 }
 
 .h-auto {
@@ -512,11 +512,7 @@ html {
   }
 
   .laravel {
-    height: 100vh;
-  }
-
-  .laravel__text {
-    font-size: 13px;
+    height: 120vh;
   }
 
   .cover {
@@ -556,13 +552,13 @@ html {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .laravel {
+    height: 100vh;
+  }
   .h-md-auto {
     height: auto;
   }
 
-  .laravel__text {
-    font-size: 14px;
-  }
   .priority__icon-div {
     height: 72px;
     width: 72px;
