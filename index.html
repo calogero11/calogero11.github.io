@@ -514,7 +514,7 @@ layout: default
 <!--------------------------------------------------- Footer Section -------------------------------------------------->
     <div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:10vh; display: none;">
         <div class="text-center d-flex align-items-center" style="height: 10vh;">
-            <img src="assets/images/darkPaperPlaneActive.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
+            <img id="footer-icon-active" src="assets/images/darkPaperPlaneActive.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
         </div>
         <div style="height:100vh; background-image: url('assets/images/drip.png');">
             <div class="row">
@@ -556,7 +556,7 @@ layout: default
         </div>
     </div>
 
-<div class="text-white of-hidden font-quicksand container-fluid p-0" style="height:10vh;">
+<div id="footerRest" class="text-white of-hidden font-quicksand container-fluid p-0 bg-info" style="height:10vh;">
     <div class="text-center d-flex align-items-center" style="height: 10vh;">
         <img id="footer-icon" src="assets/images/darkPaperPlane.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
     </div>
@@ -765,6 +765,9 @@ layout: default
         $('.dark-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
         $('.light-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
         $('#collapseParagraph2').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
+        $('#footerRest').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
+        document.getElementById('footer-icon').src = 'assets/images/' + mainTheme + 'PaperPlane.png';
+        document.getElementById('footer-icon-active').src = 'assets/images/' + mainTheme + 'PaperPlaneActive.png';
     }
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
