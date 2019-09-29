@@ -46,179 +46,152 @@ permalink: /404.html
 <!-------------------------------------------------- End Navigation --------------------------------------------------->
 
 <!--------------------------------------------------- 404 Section ---------------------------------------------------->
-<div class="row align-items-center fullscreen bg-fixed bg-cover m-0 of-hidden" style="background-image: url('assets/images/jail.jpg');">
-    <div class="container bg-dark rounded text-center text-white p-5">
+<div id="404" class="row align-items-center fullscreen bg-fixed bg-cover m-0 of-hidden" style="background-image: url('assets/images/404Dark.png');">
+    <div id="404div" class="container bg-dark rounded text-center text-white p-5">
         <h1 class="title1">
-            404
+            404-PAGE NOT FOUND
         </h1>
         <h3 class="sub-title1">
-            You've been busted, Quick use the navbar to escape!
+            USE THE NAVBAR TO GET BACK ON TRACK.
         </h3>
     </div>
 </div>
 
 <!------------------------------------------------- End 404 Section -------------------------------------------------->
-<!------------------------------------------------- Footer Section -------------------------------------------------->
 
-<div class="bg-info">
-    <hr class="m-0" style="background-color: white;">
-</div>
-
-<div id="footer" class="text-white of-hidden font-quicksand" style="height:30vh; background-color: #1e1e1e;">
-    <div class="mt-4 text-center">
-        <p>Everybody in the 404</p>
-        <p>Put your * hands up and follow me</p>
-        <div>
-            <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" class="contact-linked-in">
-                <i class="fab fa-linkedin fa-3x"></i>
-            </a>
-            <a href="https://github.com/calogero11" class="contact-github">
-                <i class="fab fa-github fa-3x"></i>
-            </a>
-            <a href="https://www.instagram.com/calogero.codes/" class="contact-insta">
-                <i class="fab fa-instagram fa-3x"></i>
-            </a>
+<!--------------------------------------------------- Footer Section -------------------------------------------------->
+<div id="footer" class="collapsing show fixed-bottom text-white of-hidden font-quicksand container-fluid p-0" style="height:10vh; display: none;">
+    <div class="text-center d-flex align-items-center" style="height: 10vh;">
+        <img id="footer-icon-active" src="assets/images/darkPaperPlaneActive.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
+    </div>
+    <div style="height:100vh; background-image: url('assets/images/drip.png');">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-10 col-md-7 float-md-right mx-auto m-md-0 mr-md-4 mt-md-3 outline-white p-0 mt-3 footer-text">
+                    <h1 class="font-quicksand footer__title text-center float-md-right mr-md-3">Follow Me On:</h1>
+                </div>
+            </div>
+            <div class="row p-0 footer__body" style="width: 100vw;">
+                <div class="col-12 p-0">
+                    <div class="float-right">
+                        <h5 class="mb-0">LinkedIn:</h5>
+                        <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" target="_blank" class="float-right contact-linked-in mx-1">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 p-0">
+                    <div class="float-right">
+                        <h5 class="mb-0">Github:</h5>
+                        <a href="https://github.com/calogero11" target="_blank" class="float-right contact-github mx-1">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 p-0">
+                    <div class="float-right">
+                        <h5 class="mb-0">Instagram:</h5>
+                        <a href="https://www.instagram.com/calogero.codes/" target="_blank" class="float-right contact-insta mx-1">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 p-0">
+                    <a href="assets/images/cv.pdf" target="_blank" class="float-right">Check out my CV</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<!------------------------------------------------- End Footer Section -------------------------------------------------->
+<div id="footerRest" class="text-white of-hidden font-quicksand container-fluid p-0 bg-info" style="height:10vh;">
+    <div class="text-center d-flex align-items-center" style="height: 10vh;">
+        <img id="footer-icon" src="assets/images/darkPaperPlane.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
+    </div>
+</div>
+<!------------------------------------------------ End Footer Section ------------------------------------------------->
 
 <!------------------------------------------------------ Script ------------------------------------------------------->
 <script>
+    // <!--------------------------------------------- Footer Function ------------------------------------------------>
+    window.addEventListener('scroll', function() {
+        var page    = document.documentElement,
+            offset  = page.scrollTop + window.innerHeight,
+            height  = page.offsetHeight;
 
-    // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
+        if (offset === height) {
+            document.getElementById('footer').style.display = '';
+            document.getElementById('footer-icon').style.display = 'none';
+            setTimeout( function(){
+                document.getElementById('footer').style.height= '110vh';
+            }, 1);
+        }
 
-    function smoothScroll() {
-        event.preventDefault();
-        const target = event.currentTarget.getAttribute('href');
-        window.scrollTo({
-            top: document.querySelector(target).offsetTop,
-            behavior: 'smooth'
-        });
-    }
-
-    // <!----------------------------------------- End Smooth Scroll Function ----------------------------------------->
-
-    // <!-------------------------------------------- TypeWriter Function --------------------------------------------->
-
-    var i = 0;
-    var txt = 'Hello World';
-    var speed = 300;
-    var elementTarget = document.getElementById("index");
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight - 1)) {
-            typeWriter();
+        else {
+            document.getElementById('footer').style.height = '10vh';
+            document.getElementById('footer').style.display= 'none';
+            document.getElementById('footer-icon').style.display = '';
         }
     });
+    // <!------------------------------------------- End Footer Function ---------------------------------------------->
 
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("app").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+    // <!----------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
+    function changeCollapsedNavbarColor() {
+        var navbarBtn           = document.getElementById('navbarBtn'),
+            navbarCollapsed     = navbarBtn.classList.contains('collapsed'),
+            navbar              = document.getElementById('navbar'),
+            navbarDark          = navbar.classList.contains('bg-dark'),
+            navbarCollapsedDark = navbar.classList.contains('bg-dark-collapsed');
+
+        if (navbarCollapsed) {
+            if(navbarDark) {
+                $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
+            }
+            else {
+                $('#navbar').removeClass('bg-light').addClass('bg-light-collapsed');
+            }
+        }
+        else {
+            if(navbarCollapsedDark) {
+                $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
+            }
+            else {
+                $('#navbar').removeClass('bg-light-collapsed').addClass('bg-light');
+            }
         }
     }
-    // <!------------------------------------------ End TypeWriter Function ------------------------------------------->
-
-    // <!--------------------------------------------- Exit IDE Function ---------------------------------------------->
-
-    function exitConsole() {
-        document.getElementById('console').style.display = 'none';
-        $('#exitConsoleMessageDiv').removeClass('d-none');
-        exitTypeWriter()
-    }
-
-    var x = 0;
-    var speed1 = 100;
-    var exitMessage = 'Did you exit Console by accident?';
-
-    function exitTypeWriter() {
-        if (x < exitMessage.length) {
-            document.getElementById("exitConsoleMessage").innerHTML += exitMessage.charAt(x);
-            x++;
-            setTimeout(exitTypeWriter, speed1);
-        }
-    }
-
-    function consoleRenew() {
-        $('#exitConsoleMessageDiv').addClass('d-none');
-        document.getElementById('console').style.display = '';
-    }
-    // <!------------------------------------------- End Exit IDE Function -------------------------------------------->
+    // <!--------------------------------- End Change Collapsed Navbar Theme Function --------------------------------->
 
     // <!---------------------------------------------- Theme Function ------------------------------------------------>
     function changeTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
         document.getElementById(mainTheme).style.display = 'none';
         document.getElementById(secondaryTheme).style.display = '';
-        changePagesTheme(mainColour, secondaryColour, mainTheme);
-        changeCardsTheme(mainColour, secondaryColour);
-        changeNavbarTheme(mainTheme, secondaryTheme);
+        changePagesTheme(mainTheme);
+        changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
+        changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
     }
 
-    function changeNavbarTheme(mainTheme, secondaryTheme) {
-        $('#navbar').removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme).removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme);
+    function changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
+        if(document.getElementById('navbar').classList.contains('bg-' + secondaryTheme + '-collapsed')) {
+            $('#navbar').removeClass('bg-' + secondaryTheme + '-collapsed').addClass('bg-' + mainTheme + '-collapsed' ).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
+        }
+        else {
+            $('#navbar').removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
+        }
         document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
+
+        $('#navbarHolder').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
     }
 
-    function changePagesTheme(mainColour, secondaryColour, mainTheme) {
-        var pages = [
-            $('#intro'),
-            $('#laravel'),
-            $('#projects'),
-            $('#languages')
-        ];
-
-        pages.forEach(function(page) {
-         page.removeClass('bg-' + secondaryColour).addClass('bg-'+ mainColour).removeClass('text-' + mainColour).addClass('text-'+ secondaryColour);
-        });
-
-        $('#index').removeClass('text-' + mainColour).addClass('text-' + secondaryColour);
-        document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + mainTheme + ".png')";
+    function changePagesTheme(mainTheme) {
+        document.getElementById('404').style.backgroundImage = "url('assets/images/404" + mainTheme + ".png')";
     }
 
-    function changeCardsTheme(mainColour, secondaryColour) {
-        var cards = [
-            $('#laravelTitle'),
-            $('#project1'),
-            $('#project2'),
-            $('#project3')
-        ];
-
-        cards.forEach(function(card) {
-            card.removeClass('bg-' + mainColour).addClass('bg-'+ secondaryColour).removeClass('text-' + secondaryColour).addClass('text-'+ mainColour);
-        });
+    function changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme ) {
+        $('#404div').removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme);
+        $('#404div').removeClass('text-' + mainColour).addClass('text-' + secondaryColour);
     }
 
     // <!-------------------------------------------- End Theme Function ---------------------------------------------->
-
-    // <!------------------------------------------ Glitch Change Function -------------------------------------------->
-
-    var current = 1;
-
-    setInterval(change, 3000);
-
-    function change() {
-        if (current < 3) {
-            current++;
-            previous = current - 1;
-        }
-        else {
-            current = 1;
-            previous = 3;
-        }
-
-        document.getElementById('glitch' + current).style.display = '';
-        document.getElementById('glitch' + previous).style.display = 'none';
-
-    }
-
-    // <!---------------------------------------- End Glitch Change Function ------------------------------------------>
-
-</script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
 </script>
 <!---------------------------------------------------- End Script ----------------------------------------------------->
