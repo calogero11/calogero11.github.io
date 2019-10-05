@@ -49,8 +49,9 @@ layout: default
     <div id="navbarDiv">
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><img id="navbarImage" src="assets/images/Logo-dark.png"></a>
-            <button id="navbarBtn" onclick="changeCollapsedNavbarColor()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button id="navbarBtn" onclick="CollapsedNavbar()" class="navbar-toggler collapsed icons" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbarBars" class="fas fa-bars icon-default-click layers" style="color: orangered; opacity: 1; transform: rotate(0deg) scale(1);"></i>
+                <i id="navbarClose" class="fas fa-times icon-click layers" style="color: orangered; opacity: 0; rotate(0deg) scale(.5);"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -96,14 +97,15 @@ layout: default
 <div id="aboutMe" class="text-white fullscreen-xl row m-0 of-hidden bg-info align-items-center" >
     <div class="col-md-6 my-5 p-0">
         <div class="d-block rounded-circle mx-auto col-8 p-0" style="background-image: radial-gradient(#9b9b9b 0%, #696969 25%,#373737 50%,#050505 100%);">
-            <img src="assets/images/me.png" data-aos="zoom-in-up" class="pic-me card-img-top h-100 w-100" alt="...">
+            <img src="assets/images/me.png" data-aos="fade-up" class="pic-me card-img-top h-100 w-100" alt="...">
         </div>
     </div>
     <div class="col-md-6 text-center font-Kanit">
-        <p class="m-0 sub-title1">
-            My web development priorities:
-        </p>
-        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-right">
+        <h1 class="m-0 dark-priority__title">
+            <u class="dark-underline">My we</u>b development priorities:
+        </h1>
+
+        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-up" data-aos-duration="750">
             <div id="priority1" class="card dark-priority__card">
                 <div class="row align-items-center">
                     <div class="col-3">
@@ -123,7 +125,7 @@ layout: default
             </div>
         </div>
 
-        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-right">
+        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-up" data-aos-duration="750">
             <div id="priority2" class="card dark-priority__card">
                 <div class="row align-items-center">
                     <div class="col-3">
@@ -144,7 +146,7 @@ layout: default
             </div>
         </div>
 
-        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-right">
+        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-up" data-aos-duration="750">
             <div id="priority3" class="card dark-priority__card">
                 <div class="row align-items-center">
                     <div class="col-3">
@@ -165,7 +167,7 @@ layout: default
             </div>
         </div>
 
-        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-right">
+        <div class="col-sm-10 col-md-12 col-lg-10 mx-auto my-3 text-info" data-aos="fade-up" data-aos-duration="750">
             <div id="priority4" class="card dark-priority__card">
                 <div class="row align-items-center">
                     <div class="col-3">
@@ -195,146 +197,146 @@ layout: default
     <div class="cover">
         <div class="scroll float-left">
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #e44d26; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #e44d26; height:100%; width:100%;">
                     <i class="fab fa-html5 mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3" >
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #f7df1e; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #f7df1e; height:100%; width:100%;">
                     <i class="fab fa-js mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #787cb4; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #787cb4; height:100%; width:100%;">
                     <i class="fab fa-php mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #379ad6; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #379ad6; height:100%; width:100%;">
                     <i class="fab fa-css3-alt mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #cd669a; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #cd669a; height:100%; width:100%;">
                     <i class="fab fa-sass mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background: linear-gradient(to left, #ffd644 0%, #ffd644 50%, #ffd644 50%, #3472a3 50%,#3472a3 100%); height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background: linear-gradient(to left, #ffd644 0%, #ffd644 50%, #ffd644 50%, #3472a3 50%,#3472a3 100%); height:100%; width:100%;">
                     <i class="fab fa-python mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #f05033; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #f05033; height:100%; width:100%;">
                     <i class="fas fa-code-branch mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #00f8ea; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #00f8ea; height:100%; width:100%;">
                     <img src="assets/images/sql.png" alt="sql" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-info rounded d-flex align-items-center" style="background-color: #ffffff; height:100%; width:100%;">
+                <h1 class="text-info rounded d-flex align-items-center languages-card" style="background-color: #ffffff; height:100%; width:100%;">
                     <i class="fab fa-github mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #85b658; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #85b658; height:100%; width:100%;">
                     <i class="fab fa-node mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #e44d26; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #e44d26; height:100%; width:100%;">
                     <i class="fab fa-laravel mx-auto text-white"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #1ca8d9; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #1ca8d9; height:100%; width:100%;">
                     <div class="text-white rounded d-flex align-items-center" style="background-color: #1ca8d9; height:100%; width:100%;">
                         <img src="assets/images/eloquent.png" alt="eloquent" class="mx-auto">
                     </div>
                 </div>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #593e80; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #593e80; height:100%; width:100%;">
                     <img src="assets/images/bootstrap.png" alt="bootstrap" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #373737; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #373737; height:100%; width:100%;">
                     <img src="assets/images/jekyll.png" alt="jekyll" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #e44d26; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #e44d26; height:100%; width:100%;">
                     <i class="fab fa-html5 mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #f7df1e; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #f7df1e; height:100%; width:100%;">
                     <i class="fab fa-js mx-auto"></i>
                 </h1>
             </div>
 
 
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #787cb4; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #787cb4; height:100%; width:100%;">
                     <i class="fab fa-php mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #379ad6; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #379ad6; height:100%; width:100%;">
                     <i class="fab fa-css3-alt mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #cd669a; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #cd669a; height:100%; width:100%;">
                     <i class="fab fa-sass mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background: linear-gradient(to left, #ffd644 0%, #ffd644 50%, #ffd644 50%, #3472a3 50%,#3472a3 100%); height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background: linear-gradient(to left, #ffd644 0%, #ffd644 50%, #ffd644 50%, #3472a3 50%,#3472a3 100%); height:100%; width:100%;">
                     <i class="fab fa-python mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #f05033; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #f05033; height:100%; width:100%;">
                     <i class="fas fa-code-branch mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #00f8ea; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #00f8ea; height:100%; width:100%;">
                     <img src="assets/images/sql.png" alt="sql" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-info rounded d-flex align-items-center" style="background-color: #f8f8f8; height:100%; width:100%;">
+                <h1 class="text-info rounded d-flex align-items-center languages-card" style="background-color: #f8f8f8; height:100%; width:100%;">
                     <i class="fab fa-github mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #85b658; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #85b658; height:100%; width:100%;">
                     <i class="fab fa-node mx-auto"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <h1 class="text-white rounded d-flex align-items-center" style="background-color: #e44d26; height:100%; width:100%;">
+                <h1 class="text-white rounded d-flex align-items-center languages-card" style="background-color: #e44d26; height:100%; width:100%;">
                     <i class="fab fa-laravel mx-auto text-white"></i>
                 </h1>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #1ca8d9; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #1ca8d9; height:100%; width:100%;">
                     <img src="assets/images/eloquent.png" alt="eloquent" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #593e80; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #593e80; height:100%; width:100%;">
                     <img src="assets/images/bootstrap.png" alt="bootstrap" class="mx-auto">
                 </div>
             </div>
             <div class="languages-square p-3">
-                <div class="text-white rounded d-flex align-items-center" style="background-color: #373737; height:100%; width:100%;">
+                <div class="text-white rounded d-flex align-items-center languages-card" style="background-color: #373737; height:100%; width:100%;">
                     <img src="assets/images/jekyll.png" alt="jekyll" class="mx-auto">
                 </div>
             </div>
@@ -354,15 +356,15 @@ layout: default
                 </h1>
                 <button id="consoleRenew" onclick="consoleRenew()" class="float-bottom btn">Yes</button>
             </div>
-            <div id="console" data-aos="fade-right" data-aos-duration="1500" class="col-11 col-sm-9 col-md-8 col-lg-7 rounded mx-auto rm-my-lg" style="background-color: #d8d8d8; height: 11.4em;">
+            <div id="console" data-aos="fade-up" data-aos-duration="750" class="col-11 col-sm-9 col-md-8 col-lg-7 rounded mx-auto rm-my-lg" style="background-color: rgb(75,75,75); height: 11.4em; box-shadow: 0 20px 30px -16px rgba(55, 55, 55, 0.81);">
                 <button class="btn-danger rounded-circle m-1 float-left" onclick="exitConsole()" style="height: 15px; width: 15px;"></button>
                 <button class="btn-warning btn-circle-sm m-1 float-left"></button>
                 <button class="btn-success btn-circle-sm m-1 float-left"></button>
-                <p class="text-center mr-6 text-info my-auto">
+                <p class="text-center mr-6 text-white my-auto">
                     IDE
                 </p>
                 <div class="row">
-                    <div class="col-12 rounded-bottom" style="background-color: #323639; height: 9.9em;">
+                    <div class="col-12 rounded-bottom" style="background-color: rgb(21,21,21); height: 9.9em;">
                         <div class="float-left mr-2 text-light border-right border-info" style="font-size: 12px;">
                             <p class="mb-1 pr-3 mt-1">01</p>
                             <p class="mb-1">02</p>
@@ -383,12 +385,12 @@ layout: default
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <div id="introPara" class="col-10 my-lg rm-mb-lg mx-auto text-center text-lg-left" data-aos="fade-left" data-aos-duration="1500">
-            <h1 class="font-Kanit">
-                Where my passion began...
+        <div id="introPara" class="col-10 p-2 my-lg rm-mb-lg card dark-card mx-auto text-center text-lg-left rounded" data-aos="fade-up" data-aos-duration="750">
+            <h1 class="font-Kanit dark-intro__card-title">
+                <u class="dark-underline">Wher</u>e my passion began...
             </h1>
-            <div class="content2">
-                <p class="font-quicksand">
+            <div class="content2 dark-card-text font-quicksand">
+                <p>
                     When I was younger, I really underestimated how complex technology was and I kind of thought these
                     things just ‘worked’... well, this was until I gave my first instruction to a computer;
                     <kbd>
@@ -426,7 +428,7 @@ layout: default
                         wouldn’t work and I would have no idea why. Looking back now in most cases it was python’s
                         strict indentation, which I gathered a little later.
                     </p>
-                    <p>
+                    <p class="p-0">
                         My passion for programming since I started has grown alongside my development and I think it
                         always will. I know this because every time I learn something that I'd never done before I
                         get an amazing feeling of accomplishment and growth which is why I’ve decided to fulfil my
@@ -444,25 +446,25 @@ layout: default
 <div id="laravel" class="laravel row text-white bg-info m-0 of-hidden">
         <div id="laravelTitle" class="col-3 col-md-2 d-flex align-items-center laravel text-info bg-white p-3" style="font-size: 8vh;">
         <div class="font-quicksand mx-auto">
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">E</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">V</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">R</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">A</p>
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-duration="750">
                 <p class="mx-auto m-0 anticlockwise-90" style="width:8vh;">L</p>
             </div>
             <div>
@@ -470,42 +472,44 @@ layout: default
             </div>
         </div>
     </div>
-    <div id="laravelPara" class="col-7 row align-items-center laravel__text mx-auto font-quicksand p-0" data-aos="fade-left" data-aos-duration="1000">
-        <div>
-            <h1 class="font-Kanit">
-                Laravel, my biggest self-taught experience
+    <div id="laravelPara" class="col-9 col-sm-7 row align-items-center laravel__text mx-auto font-quicksand">
+        <div class="rounded p-3 card dark-card" data-aos="fade-up" data-aos-duration="750">
+            <h1 class="font-Kanit dark-laravel__card-title">
+                <u class="dark-underline">Lara</u>vel, my biggest self-taught experience
             </h1>
-            <p>
-                So, to get ahead of the game, I decided to learn Laravel. Initially I was in doubt about Laravel and
-                whether it was worth learning. However, I quickly realised it was.
-            </p>
-            <p>
-                I was trying to create a log in system and it was taking me hours. It was unreliable, unsecure and
-                possibly even broken, well this was until I RTD; this is where I discovered that Laravel was all about
-                code reusability, creating a log in system had never been so easy, it was as simple as typing:
-                <kbd>
-                      php artisan make:auth
-                </kbd>
-                which created a secure system in a matter of seconds, at this point I fell in love with Laravel.
-            </p>
-            <p>
-                When I initially developed a website, I just kept all my website files in a single folder, it became
-                hard to maintain and I never knew where to find files. With Laravel MVC’s nature all elements of a
-                website are kept in logical order.
-            </p>
-            <p>
-                Also, let's not talk about
-                <kbd>
-                      artisan
-                </kbd>
-                - how many times have you written a piece of code that you'll need to repeat in every other document in
-                your project? Well let's just say that artisan does all that for you, why would you want to be a wet
-                developer when you can be a dry one?
-            </p>
-            <p>
-                In conclusion, I think that Laravel is a great way to start learning programming and a great way to get
-                prepared for the future as a developer.
-            </p>
+            <div class="dark-card-text">
+                <p>
+                    So, to get ahead of the game, I decided to learn Laravel. Initially I was in doubt about Laravel and
+                    whether it was worth learning. However, I quickly realised it was.
+                </p>
+                <p>
+                    I was trying to create a log in system and it was taking me hours. It was unreliable, unsecure and
+                    possibly even broken, well this was until I RTD; this is where I discovered that Laravel was all about
+                    code reusability, creating a log in system had never been so easy, it was as simple as typing:
+                    <kbd>
+                        php artisan make:auth
+                    </kbd>
+                    which created a secure system in a matter of seconds, at this point I fell in love with Laravel.
+                </p>
+                <p>
+                    When I initially developed a website, I just kept all my website files in a single folder, it became
+                    hard to maintain and I never knew where to find files. With Laravel MVC’s nature all elements of a
+                    website are kept in logical order.
+                </p>
+                <p>
+                    Also, let's not talk about
+                    <kbd>
+                        artisan
+                    </kbd>
+                    - how many times have you written a piece of code that you'll need to repeat in every other document in
+                    your project? Well let's just say that artisan does all that for you, why would you want to be a wet
+                    developer when you can be a dry one?
+                </p>
+                <p class="m-0">
+                    In conclusion, I think that Laravel is a great way to start learning programming and a great way to get
+                    prepared for the future as a developer.
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -516,17 +520,17 @@ layout: default
         <div class="text-center d-flex align-items-center" style="height: 10vh;">
             <img id="footer-icon-active" src="assets/images/darkPaperPlaneActive.png" class="h-50 mx-auto" alt="paperPlaneActive" style="transform: rotate(-45deg);">
         </div>
-        <div style="height:100vh; background-image: url('assets/images/drip.png');">
+        <div style="height:100vh; background-color: #0e0e0e;">
             <div class="row">
                 <div class="col-12">
                     <div class="col-10 col-md-7 float-md-right mx-auto m-md-0 mr-md-4 mt-md-3 outline-white p-0 mt-3 footer-text">
-                        <h1 class="font-quicksand footer__title text-center float-md-right mr-md-3">Follow Me On:</h1>
+                        <h1 class="font-quicksand footer__title text-center float-md-right mr-md-3" style="color: orangered;">Follow Me On:</h1>
                     </div>
                 </div>
                 <div class="row p-0 footer__body" style="width: 100vw;">
                     <div class="col-12 p-0">
                         <div class="float-right">
-                            <h5 class="mb-0">LinkedIn:</h5>
+                            <h5 class="mb-0" style="color: orangered;">LinkedIn:</h5>
                             <a href="https://www.linkedin.com/in/calogero-prestifilippo-304816172/" target="_blank" class="float-right contact-linked-in mx-1">
                                 <i class="fab fa-linkedin"></i>
                             </a>
@@ -534,7 +538,7 @@ layout: default
                     </div>
                     <div class="col-12 p-0">
                         <div class="float-right">
-                            <h5 class="mb-0">Github:</h5>
+                            <h5 class="mb-0" style="color: orangered;">Github:</h5>
                             <a href="https://github.com/calogero11" target="_blank" class="float-right contact-github mx-1">
                                 <i class="fab fa-github"></i>
                             </a>
@@ -542,14 +546,14 @@ layout: default
                     </div>
                     <div class="col-12 p-0">
                         <div class="float-right">
-                            <h5 class="mb-0">Instagram:</h5>
+                            <h5 class="mb-0" style="color: orangered;">Instagram:</h5>
                             <a href="https://www.instagram.com/calogero.codes/" target="_blank" class="float-right contact-insta mx-1">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
                     <div class="col-12 p-0">
-                        <a href="assets/images/cv.pdf" target="_blank" class="float-right">Check out my CV</a>
+                        <a href="assets/images/cv.pdf" target="_blank" style="color: orangered;" class="float-right">Check out my CV</a>
                     </div>
                 </div>
             </div>
@@ -615,32 +619,65 @@ layout: default
     }
     // <!----------------------------------------- End Sticky Navbar Function ----------------------------------------->
 
-    // <!----------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
-    function changeCollapsedNavbarColor() {
-        var navbarBtn           = document.getElementById('navbarBtn'),
-            navbarCollapsed     = navbarBtn.classList.contains('collapsed'),
-            navbar              = document.getElementById('navbar'),
-            navbarDark          = navbar.classList.contains('bg-dark'),
-            navbarCollapsedDark = navbar.classList.contains('bg-dark-collapsed');
-
-        if (navbarCollapsed) {
-            if(navbarDark) {
-                $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
-            }
-            else {
-                $('#navbar').removeClass('bg-light').addClass('bg-light-collapsed');
-            }
-        }
-        else {
-            if(navbarCollapsedDark) {
-                $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
-            }
-            else {
-                $('#navbar').removeClass('bg-light-collapsed').addClass('bg-light');
-            }
-        }
+    // <!----------------------------------------- Collapsed Navbar Function ------------------------------------------>
+    function CollapsedNavbar() {
+        changeCollapsedNavbarTheme();
+        navbarIcon();
     }
-    // <!--------------------------------- End Change Collapsed Navbar Theme Function --------------------------------->
+        // <!------------------------------- Change Collapsed Navbar Theme Function ----------------------------------->
+
+            function changeCollapsedNavbarTheme() {
+                var navbarBtn = document.getElementById('navbarBtn'),
+                    navbarCollapsed = navbarBtn.classList.contains('collapsed'),
+                    navbar = document.getElementById('navbar'),
+                    navbarDark = navbar.classList.contains('bg-dark'),
+                    navbarCollapsedDark = navbar.classList.contains('bg-dark-collapsed');
+
+                if (navbarCollapsed) {
+                    if (navbarDark) {
+                        $('#navbar').removeClass('bg-dark').addClass('bg-dark-collapsed');
+                    } else {
+                        $('#navbar').removeClass('bg-light').addClass('bg-light-collapsed');
+                    }
+                } else {
+                    if (navbarCollapsedDark) {
+                        $('#navbar').removeClass('bg-dark-collapsed').addClass('bg-dark');
+                    } else {
+                        $('#navbar').removeClass('bg-light-collapsed').addClass('bg-light');
+                    }
+                }
+            }
+
+        // <!---------------------------- End Change Collapsed Navbar Theme Function ---------------------------------->
+
+        // <!---------------------------------------- Navbar Icon Function -------------------------------------------->
+
+
+        function navbarIcon() {
+
+
+            var  navbarClose = document.getElementById('navbarClose'),
+                 navbarBars = document.getElementById('navbarBars');
+
+
+            if (navbarClose.style.opacity === '1') {
+                navbarClose.style.opacity = '0';
+                navbarClose.style.transform = 'rotate(0deg) scale(.5)';
+                navbarBars.style.opacity = '1';
+                navbarBars.style.transform = 'rotate(0deg) scale(1)';
+            }
+            else {
+                navbarClose.style.opacity = '1';
+                navbarClose.style.transform = 'rotate(180deg) scale(1)';
+                navbarBars.style.opacity = '0';
+                navbarBars.style.transform = 'rotate(180deg) scale(.5)';
+            }
+        }
+
+
+        // <!-------------------------------------- End Navbar Icon Function ------------------------------------------>
+
+    // <!--------------------------------------- End Collapsed Navbar Function ---------------------------------------->
 
     // <!------------------------------------------- Smooth Scroll Function ------------------------------------------->
 
@@ -663,7 +700,7 @@ layout: default
         languages = document.getElementById('languages');
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > (languages.offsetTop + languages.offsetHeight - 1)) {
+        if (window.scrollY === (languages.offsetTop + languages.offsetHeight)) {
             typeWriter();
         }
     });
@@ -707,24 +744,24 @@ layout: default
     function changeTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
         document.getElementById(mainTheme).style.display = 'none';
         document.getElementById(secondaryTheme).style.display = '';
-        changePagesTheme(mainColour, secondaryColour, mainTheme);
+        changePagesTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
         changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
         changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme);
     }
 
     function changeNavbarTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
+        $('#navbarHolder').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
+        document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
+
         if(document.getElementById('navbar').classList.contains('bg-' + secondaryTheme + '-collapsed')) {
             $('#navbar').removeClass('bg-' + secondaryTheme + '-collapsed').addClass('bg-' + mainTheme + '-collapsed' ).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
         }
         else {
             $('#navbar').removeClass('bg-' + secondaryTheme).addClass('bg-' + mainTheme).removeClass('navbar-' + secondaryTheme).addClass('navbar-' + mainTheme);
         }
-        document.getElementById('navbarImage').src = 'assets/images/Logo-' + mainTheme + '.png';
-
-        $('#navbarHolder').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
     }
 
-    function changePagesTheme(mainColour, secondaryColour, mainTheme) {
+    function changePagesTheme(mainColour, secondaryColour, mainTheme, secondaryTheme) {
         var pages = [
             $('#aboutMe'),
             $('#intro'),
@@ -738,6 +775,11 @@ layout: default
 
         $('#index').removeClass('text-' + mainColour).addClass('text-' + secondaryColour);
         document.getElementById('index').style.backgroundImage = "url('assets/images/index-background-" + mainTheme + ".png')";
+        $('.' + secondaryTheme + '-underline').removeClass(secondaryTheme + '-underline').addClass(mainTheme + '-underline');
+        $('.' + secondaryTheme + '-intro__card-title').removeClass(secondaryTheme + '-intro__card-title').addClass(mainTheme + '-intro__card-title');
+        $('.' + secondaryTheme + '-priority__title').removeClass(secondaryTheme + '-priority__title').addClass(mainTheme + '-priority__title');
+        $('.' + secondaryTheme + '-card-text').removeClass(secondaryTheme + '-card-text').addClass(mainTheme + '-card-text');
+        $('.' + secondaryTheme + '-laravel__card-title').removeClass(secondaryTheme + '-laravel__card-title').addClass(mainTheme + '-laravel__card-title');
     }
 
     function changeCardsTheme(mainColour, secondaryColour, mainTheme, secondaryTheme ) {
@@ -760,10 +802,9 @@ layout: default
             priorityCard.removeClass(secondaryTheme + '-priority__card').addClass(mainTheme + '-priority__card');
         });
 
-        $('.dark-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
-        $('.light-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
-        $('.dark-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
-        $('.light-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
+        $('.' + secondaryTheme + '-priority__card-title').removeClass(secondaryTheme + '-priority__card-title').addClass(mainTheme + '-priority__card-title');
+        $('.' + secondaryTheme + '-card').removeClass(secondaryTheme + '-card').addClass(mainTheme + '-card');
+        $('.' + secondaryTheme +'-priority__card-text').removeClass(secondaryTheme + '-priority__card-text').addClass(mainTheme + '-priority__card-text');
         $('#collapseParagraph2').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
         $('#footerRest').removeClass('bg-' + secondaryColour).addClass('bg-' + mainColour);
         document.getElementById('footer-icon').src = 'assets/images/' + mainTheme + 'PaperPlane.png';

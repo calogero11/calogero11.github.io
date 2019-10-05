@@ -12,10 +12,6 @@ html {
   z-index: 1030;
 }
 
-.flip {
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-
 .of-hidden {
   overflow: hidden;
 }
@@ -148,6 +144,15 @@ html {
   }
 }
 
+
+.icon-click {
+  transition: opacity .5s, transform .5s;
+}
+
+.icon-default-click {
+  transition: opacity .5s, transform .5s;
+}
+
 .title1 {
   font-size: 60px !important;
 }
@@ -159,6 +164,14 @@ html {
 .navbar-brand img {
   height : 3rem;
 }
+
+.navbar-default .navbar-nav>.active> a,
+.navbar-default .navbar-nav>.active> a:focus,
+.navbar-default .navbar-nav>.active> a:hover {
+  background: red !important;
+}
+
+
 
 .anticlockwise-90 {
   transform: rotate(-90deg);
@@ -343,7 +356,7 @@ html {
 }
 
 .collapsing {
-  transition: height 0.5s ease !important;
+  transition: height 0.75s ease !important;
 }
 
 
@@ -393,7 +406,7 @@ html {
 }
 
 .progress-bar {
-  background-color: #ff7e00 !important;
+  background-color: orangered !important;
   transition: 0ms !important;
 }
 
@@ -412,8 +425,8 @@ html {
 }
 
 .dark-priority__card {
-  box-shadow: 0 20px 30px -16px rgba(239, 239, 239, 0.81);
-  background-color: #131313 !important;
+  box-shadow: 0 20px 30px -16px rgba(55, 55, 55, 0.81);
+  background-color: #151515 !important;
   transition: transform .2s;
 }
 
@@ -438,7 +451,7 @@ html {
 
 .dark-priority__card-text {
   text-align: left;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(95,95,95,0.98);
   font-size: 14px;
   margin: 0;
 }
@@ -503,6 +516,60 @@ html {
 
 .footer__body {
   margin-top: 50vh;
+}
+
+.dark-underline {
+  text-decoration-color: white;
+}
+
+.light-underline {
+  text-decoration-color: black;
+}
+
+.dark-priority__title {
+  color: orangered;
+}
+
+.light-priority__title {
+  color: #000000;
+}
+
+.dark-intro__card-title {
+  color: orangered;
+}
+
+.light-intro__card-title {
+  color: #000000;
+}
+
+.dark-laravel__card-title {
+  color: orangered;
+}
+
+.light-laravel__card-title {
+  color: #000000;
+}
+
+.dark-card-text {
+  color: rgba(95,95,95,0.98);
+}
+
+.light-card-text {
+  color: rgba(45, 45, 45, 0.71);
+}
+
+.dark-card {
+  background-color: #151515 !important;
+  box-shadow: 0 20px 30px -16px rgba(55, 55, 55, 0.81);
+}
+
+.light-card {
+   background-color: white !important;
+   box-shadow: 0 20px 30px -16px rgba(9,9,16,.2);
+}
+
+.languages-card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 // Small devices (landscape phones, 576px and up)
