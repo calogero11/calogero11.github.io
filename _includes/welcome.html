@@ -1,0 +1,40 @@
+<div id="welcome" class="window-size position-relative">
+    <div id="lgWelcomeBackgroundText" class="position-absolute window-size overflow-hidden">
+        <p class="font-roboto text-center">A</p>
+        <p class="font-roboto text-center">DEVELOPER</p>
+        <p class="font-roboto text-center">WITH</p>
+    </div>
+    <div id="xsWelcomeBackgroundText" class="position-absolute window-size overflow-hidden">
+        <p class="font-roboto text-center">DEV</p>
+        <p class="font-roboto text-center">WITH</p>
+    </div>
+    <div class="position-absolute align-items-center d-flex window-size">
+        <div class="scene mx-auto">
+            <div id="cube" class="cube font-roboto">
+                <div class="cube-face cube-face-front align-items-center d-flex">
+                    <p class="mx-auto">Passion</p>
+                </div>
+                <div class="cube-face cube-face-back align-items-center d-flex">
+                    <p class="mx-auto">Patience</p>
+                </div>
+                <div class="cube-face cube-face-right align-items-center d-flex">
+                    <p class="mx-auto">Determination</p>
+                </div>
+                <div class="cube-face cube-face-left align-items-center d-flex">
+                    <p class="mx-auto">Motivation</p>
+                </div>
+                <div class="cube-face cube-face-top align-items-center d-flex">
+                    <p class="mx-auto">Class</p>
+                </div>
+                <div class="cube-face cube-face-bottom align-items-center d-flex">
+                    <p class="mx-auto">Persistence</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="left" onmouseover="RotateCube('left')"></div>
+    <div class="top" onmouseover="RotateCube('top')"></div>
+    <div class="front" onmouseover="RotateCube('front')" onclick="RotateCube('back')"></div>
+    <div class="bottom" onmouseover="RotateCube('bottom')"></div>
+    <div class="right" onmouseover="RotateCube('right')"></div>
+</div>
