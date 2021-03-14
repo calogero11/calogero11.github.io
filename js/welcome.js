@@ -31,29 +31,12 @@ function SetWelcomeTheme(theme) {
     }
 }
 
-function SetWelcomeResponsive() {
-    // Extra Small devices
+function SetWelcomeResponsiveXs() {
     document.getElementById('lgWelcomeBackgroundText').style.display = 'none';
     document.getElementById('xsWelcomeBackgroundText').style.display = 'inline';
-    
-    if (window.innerWidth >= 576) {
-        // Small devices
-    }
-    if (window.innerWidth >= 768) {
-        // Medium devices
-    }
-    if (window.innerWidth >= 992) {
-        // Large devices
-        document.getElementById('lgWelcomeBackgroundText').style.display = 'inline';
-        document.getElementById('xsWelcomeBackgroundText').style.display = 'none';
-    }
-
-    if (window.innerWidth >= 1200) {
-        // Extra Large devices
-    }
-    if (window.innerWidth >= 1400) {
-        // Extra Extra Large devices
-    }
 }
 
-window.addEventListener('resize', SetWelcomeResponsive);
+function SetWelcomeResponsiveLg() {
+    document.getElementById('lgWelcomeBackgroundText').style.display = 'inline';
+    document.getElementById('xsWelcomeBackgroundText').style.display = 'none';
+}

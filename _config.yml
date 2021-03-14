@@ -11,3 +11,5 @@ sass:
   sass_dir: css
 js:
   js_dir: js
+images:
+  images_dir: images
