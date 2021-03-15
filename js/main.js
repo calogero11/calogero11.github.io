@@ -1,8 +1,18 @@
 let theme = 'light';
+let body = document.getElementsByTagName("body")[0];
 
 function SetTheme(theme) {
     SetWelcomeTheme(theme);
     SetLoadingTheme(theme);
+    
+    if (theme === 'light') {
+        body.style.cursor = "url('/images/light/cursor.png'), auto";
+        body.style.backgroundColor = 'white';
+    }
+    else if (theme === 'dark') {
+        body.style.cursor = "url('/images/dark/cursor.png'), auto";
+        body.style.backgroundColor = 'black';
+    }
 }
 
 function SetResponsive() {
